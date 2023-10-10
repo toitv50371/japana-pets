@@ -27,6 +27,7 @@
     --fs-12: 12px;
     --fs-14: 14px;
     --fs-16: 16px;
+    --fs-24: 24px;
     --fs-28: 28px;
     --fs-38: 38px;
 
@@ -50,6 +51,7 @@ a:hover{
 
 .menu__navbar:hover {
     background: var(--color-white);
+    border-radius: 0;
     
 }
 .menu__navbar:hover .navbar__langues-option, .navbar-brand {
@@ -98,11 +100,11 @@ a:hover{
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
+    display: block;
     height: 135px;
-    /* background: black; */
     align-items: center;
+    padding: 1rem 5rem;
+    
     
 }
 .navbar-brand, .navbar__langues-option{
@@ -159,7 +161,7 @@ a:hover{
     text-align: start;
     position: absolute;
     right: 0;
-    left: 10rem;
+    left: 5rem;
     bottom: 10rem;
     color: var(--color-white);
 }
@@ -174,7 +176,7 @@ a:hover{
 .nav__des-right{
     text-align: end;
     position: absolute;
-    right: 10rem;
+    right: 5rem;
     bottom: 10rem;
     color: var(--color-white);
 }
@@ -211,7 +213,7 @@ a:hover{
 
 /* Section template 1 */
 .template{
-    padding: 4.75rem 0;
+    padding: 4.75rem 0 !important;
 }  
 .template__text{
     max-width: 72.6rem;
@@ -315,20 +317,20 @@ a:hover{
     color: var(--color-light-black);
     opacity: .8;
 }
-.section__13-pd:hover{
-
+.section__13-img{
+    width: 100%;
+    height: var(--height-img-banner);
+    object-fit: fill;
 }
 
 
 /* END Section template 2 */
 
 /* Section template 3 */
-.section__3{
-    text-align: center;
-}
 .section__3 {
-    margin: 2.25rem;
+    margin: 2.25rem 5rem;
     padding: 0 3.125rem;
+    text-align: center;
 }
 
 .section__3-content{
@@ -343,6 +345,9 @@ a:hover{
 }
 .section__3-des{
     color: var(--color-base-text);
+}
+.section__3-product{
+    margin-top: 5rem;
 }
 .section__3-pd{
     margin-bottom: 5rem;
@@ -507,7 +512,7 @@ a:hover{
 
 /* Section 5 */
 .section__5, .section__8, .section__9{
-    margin: 2.25rem;
+    margin: 2.25rem 5rem;
     padding: 4.75rem 3.125rem;
     
 }
@@ -517,7 +522,7 @@ a:hover{
 }
 .section__left{
     margin: auto;
-    padding: 50px 70px;
+    padding: 3.125rem 5rem;
     
 }
 .section__5-btn{
@@ -539,7 +544,7 @@ a:hover{
 /* Section 6 */
 
 .section__6{
-    margin: 2.25rem;
+    margin: 2.25rem 5rem;
     padding: 4.75rem 3.125rem;
     text-align: center;
 }
@@ -663,13 +668,16 @@ div.section__10-panel::after:nth-child(4){
 .panel-group{
     overflow: hidden;
 }
+.panel-heading{
+    padding-left: 0;
+}
 .section__10-panel .panel-heading{
     background: transparent;
 }
 .section__10-panel .panel-title{
     display: flex;
     justify-content: space-between;
-    font-size: var(--fs-28);
+    font-size: var(--fs-24);
     color: var(--color-black);
     letter-spacing: .2rem;
 }
@@ -735,6 +743,7 @@ div.section__10-panel::after:nth-child(4){
 }
 .section__11-content{
     position: relative;
+    margin: 0 5rem;
 }
 .section__11-img{
     width: 100%;
@@ -773,6 +782,7 @@ div.section__10-panel::after:nth-child(4){
 /* EndSection 11 */
 .section__12{
     position: relative;
+    margin: 0 5rem;
 }
 
 /* Section 12 */
@@ -954,8 +964,8 @@ div.section__10-panel::after:nth-child(4){
 /* Section 16 */
 .section__16{
     text-align: center;
-    margin: 2.25rem;
-    padding: 0 3.125rem 4.75rem 3.125rem;
+    margin: 2.25rem 5rem;
+
 }
 
 .section__16-content{
@@ -1005,7 +1015,7 @@ div.section__10-panel::after:nth-child(4){
     width: max-content;
     position: absolute;
     top: 0;
-    left: 8rem;
+    left: 5rem;
     bottom: 0;
     margin: auto 0;
     font-size: var(--fs-16);
@@ -1060,15 +1070,15 @@ div.section__10-panel::after:nth-child(4){
     padding-top: 2rem;
 }
 .footer__p-small{
-    font-size: var(--fs-9);
+    font-size: var(--fs-12);
     letter-spacing: .1rem;
     color: var(--color-light-black);
     opacity: .5;
     line-height: 10px;
 }
-.footer__right{
-
-
+/* Footer */
+.footer{
+    margin: 0 5rem 4.375rem 5rem;
 }
 .footer-p{
     font-size: var(--fs-12);
@@ -1089,6 +1099,7 @@ div.section__10-panel::after:nth-child(4){
 .footer__right-icon{
     font-size: 1.5rem;
     padding: .5rem;
+    margin: 0 1rem;
    
 }
 .footer__list-payment{
