@@ -1,3 +1,65 @@
+
+
+/** Product Detail **/ 
+
+
+
+
+
+
+let activeImg = document.querySelectorAll('.pdDetail__img-slide-detail')
+activeImg.forEach(event => {
+    event.addEventListener('click', function(){
+        activeImg.forEach(event => event.classList.remove('active'))
+        this.classList.add('active')    
+    })
+})
+
+const imgs = document.querySelectorAll('.img__item a')
+const imgBtns = [...imgs]
+let imgId = 1
+imgBtns.forEach( imgItem => {
+    imgItem.addEventListener('click', function(event){
+        event.preventDefault()
+        imgId = imgItem.dataset.id 
+        slideImage()
+    })
+})
+function slideImage(){
+    const displayWidth = document.querySelector('.img__showcase img:first-child').clientWidth
+    document.querySelector('.img__showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`
+}
+
+
+
+
+
+
+
+
+/** End Product Detail **/ 
+
+// Sectin feedback
+
+let userTexts_detail = document.getElementsByClassName('section__feedback-user-text')
+let userPics_detail = document.getElementsByClassName('section__feedback-user')
+function showReviewpdDetail(){
+    for(var userPic of userPics_detail){
+        userPic.classList.remove('active-pic')
+    }
+    for(var userText of userTexts_detail){
+        userText.classList.remove('active-text')  
+    }
+    let i = Array.from(userPics_detail).indexOf(event.target)
+    userPics_detail[i].classList.add('active-pic')
+    userTexts_detail[i].classList.add('active-text')
+}
+
+
+
+
+/** Index **/ 
+
 // Section 6
 let section6Btn = document.querySelectorAll('.section__6-pag-btn')
 section6Btn.forEach(event => {
@@ -9,6 +71,7 @@ section6Btn.forEach(event => {
 
 
 
+
 // 
 
 function section11slide(){
@@ -16,19 +79,6 @@ function section11slide(){
     document.getElementById('section__11-img-a').style.clipPath = 'polygon(0 0,' + slideValue + '% 0, ' + slideValue + '% 100%, 0 100%'
 }
 
-// section 15
 
-let userTexts = document.getElementsByClassName('section__15-user-text')
-let userPics = document.getElementsByClassName('section__15-user')
-function showReview(){
-    for(var userPic of userPics){
-        userPic.classList.remove('active-pic')
-    }
-    for(var userText of userTexts){
-        userText.classList.remove('active-text')  
-    }
-    let i = Array.from(userPics).indexOf(event.target)
-    userPics[i].classList.add('active-pic')
-    userTexts[i].classList.add('active-text')
-}
+/** End Index **/ 
 
