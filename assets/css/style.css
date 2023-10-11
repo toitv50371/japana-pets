@@ -4,10 +4,16 @@
     --height-map: 500px;
     --height-img-banner: 650px;
     --height-img-pd: 420px;
+    --height-img-pd-brand: 325px;
 
 
     --color-white:#ffffff;
     --color-light-white:#f9f9f9;
+    --color-range:#d3d3d3;
+    
+
+
+
     --palette-hex-code: #FAEAA1;
     --color-light-orian: #f7eedd;
     --color-light-yellow: #faeaa1;
@@ -30,6 +36,7 @@
     
 
     --fs-9: 9px;
+    --fs-10: 10px;
     --fs-12: 12px;
     --fs-14: 14px;
     --fs-16: 16px;
@@ -127,11 +134,13 @@ a:hover{
 .section__p{
     font-size: var(--fs-12);
     padding: 1rem 0;
+    margin: 0;
     letter-spacing: .1rem;
     color: var(--color-light-black);
     opacity: .8;
     line-height: 14px;
     text-align: start;
+    margin-left: -10px;
 }
 
 .section__title{
@@ -159,6 +168,250 @@ a:hover{
 .section__pd-star{
     color: var(--color-yellow);
 }
+
+
+
+
+/* Section product */
+.section__product {
+    margin: 2.25rem 5rem;
+    padding: 0 3.125rem;
+    text-align: center;
+}
+
+.section__product-content{
+    padding-top: 1.875rem;
+}
+.section__product-icon{
+    font-size: var(--fs--icon-section);
+}
+.section__product-title{
+    font-size: var(--fs-16);
+    margin: 2rem 0;
+}
+.section__product-des{
+    color: var(--color-base-text);
+}
+.section__product-product{
+    margin-top: 5rem;
+}
+.section__product-pd{
+    margin-bottom: 5rem;
+}
+
+.section__product-pd:hover .section__pd-right{
+    display: block;
+    animation: zoom-out 1s ease-in-out;
+}
+.section__product-pd:hover .section__pd-bot{
+    display: block;
+    animation: change-button 1s ease-in-out;
+}
+
+.section__pd-top{
+    position: relative;
+    height: var(--height-img-pd);
+    overflow: hidden;
+    transition: width 2s;
+}
+.section__pd-left{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.3rem 1.5rem;
+    font-size: var(--fs-12);
+    background: #53c0a8;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.section__pd-right{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding:1.2rem 1.5rem;
+    border-radius: 9000px;
+    font-size: var(--fs-14);
+    background: var(--color-white);
+    color: var(--color-black);
+    text-transform: uppercase;
+    display: none;
+}
+
+.section__product-pd-icon{
+    font-size: var(--fs-14);
+}
+.section__pd-bot{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 1rem;
+    background: var(--palette-hex-code);
+    padding: 1rem;
+    border: none;
+    margin: 0 1rem;
+    font-size: var(--fs-14);
+    letter-spacing: .2rem;
+    font-weight: 500;
+    display: none;
+}
+
+.pd__img-1a, .pd__img-1b{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.section__product-pd:hover .pd__img-1a{
+    display: none;
+}
+.section__product-pd:hover .pd__img-1b{
+    display: block;
+    transform: scale(1.1);
+    animation: change-img 1s ease;
+    
+}
+.pd__img-1b{
+    display: none;
+}
+.section__pd-content{
+    margin-top: 1rem;
+    text-align: start;
+}
+
+
+.section__pd-name, .section__pd-price{
+    font-size: var(--fs-16);
+    color: var(--color-black);
+    margin: 1rem 0;
+    
+}
+.section__pd-name{
+    position: relative;
+    width: fit-content;
+}
+.section__pd-name::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    position: absolute;
+    left: 0;
+    bottom: -.2rem;
+    transition: width .3s;
+}
+.section__product-pd:hover .section__pd-name::after{
+    width: 100%;
+}
+
+.section__product-pd-btn{
+    background: var(--palette-hex-code);
+    padding: 1.5rem 8rem;
+    border: none;
+    margin: 0 1rem;
+    font-size: var(--fs-12);
+    letter-spacing: .2rem;
+    font-weight: 600;
+}
+
+
+/* End section product */
+
+/* Pannel */
+.panel-group .panel{
+    border-radius: 0;
+}
+.section__panel-custom{
+    position: relative;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    
+}
+.section__panel-custom::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    left: 0;
+    transition: width .3s;
+
+}
+
+
+
+
+.panel-group{
+    overflow: hidden;
+}
+.panel-heading{
+    padding-left: 0;
+}
+.section__panel-custom .panel-heading{
+    background: transparent;
+}
+.section__panel-custom .panel-title{
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-16);
+    color: var(--color-black);
+    letter-spacing: .2rem;
+}
+.section__panel-custom .panel__icon-down{
+    font-size: var(--fs-14);
+    display: flex;
+    align-items: center;
+}
+.panel__icon-up{
+    display: none !important;
+    font-size: var(--fs-14);
+    display: flex;
+    align-items: center;
+    
+}
+.panel-ship{
+    display: flex;
+}
+
+
+.panel-btn{
+    padding: 2rem 0;
+}
+.panel-a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.panel-button{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: .2em;
+    color:var(--color-black);
+    
+}
+.panel-button::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    left: 0;
+    bottom: -1rem;
+    transition: width .3s;
+}
+
+.section__panel-custom a {
+    text-decoration: none;
+}
+
+/* End Panel */
 
 
 /* Section express */
@@ -283,20 +536,30 @@ a:hover{
 
 
 
-.footer__content-left, .footer__content-right{
-    padding-top: 2rem;
-}
-.footer__p-small{
-    font-size: var(--fs-12);
-    letter-spacing: .1rem;
-    color: var(--color-light-black);
-    opacity: .5;
-    line-height: 10px;
+
+.block{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
 }
 /* Footer */
 .footer{
     margin: 0 5rem 4.375rem 5rem;
+    /* position: relative; */
 }
+/* .footer::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    left: 0;
+    top: 0;
+    transition: width .3s;
+
+} */
 .footer-p{
     font-size: var(--fs-12);
     letter-spacing: .1rem;
@@ -335,7 +598,16 @@ a:hover{
 .footer__bot-right{
     text-align: end;
 }
-
+.footer__content-left, .footer__content-right{
+    padding-top: 2rem;
+}
+.footer__p-small{
+    font-size: var(--fs-12);
+    letter-spacing: .1rem;
+    color: var(--color-light-black);
+    opacity: .5;
+    line-height: 10px;
+}
 
 /* Animation */
 @keyframes banner{
