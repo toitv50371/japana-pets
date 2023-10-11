@@ -223,6 +223,31 @@
 .pdDetail__section1-note, .pdDetail__section1-share{
     display: flex;
 }
+.pdDetail__section1-share{
+    margin-top: 2rem;
+}
+.pdDetail__section1-share i {
+    font-size: var(--fs-20);
+    margin-right: 1rem;
+}
+.pdDetail__section1-share p{
+    position: relative;
+    font-size:var(--fs-16);
+}
+.pdDetail__section1-share p::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .6;
+    left: 0;
+    bottom: -.1rem;
+    transition: width .3s;
+}
+.pdDetail__section1-share:hover p::after{
+    width: 100%;
+}
 .bottom-view{
     border-bottom: solid 1px var(--color-black);
     width: max-content;
