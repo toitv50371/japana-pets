@@ -5,7 +5,7 @@
 /** Brand **/ 
 
 var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var output = document.getElementById("value__price");
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
@@ -19,7 +19,7 @@ function myFunction() {
   
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
+    if (!event.target.matches('.brandSection__2-dropBtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
@@ -38,13 +38,12 @@ function myFunction() {
 
 /** Product Detail **/ 
 
-
-
 let activeImg = document.querySelectorAll('.pdDetail__img-slide-detail')
 activeImg.forEach(event => {
     event.addEventListener('click', function(){
         activeImg.forEach(event => event.classList.remove('active'))
         this.classList.add('active')    
+        console.log('test')
     })
 })
 
@@ -64,15 +63,9 @@ function slideImage(){
 }
 
 
-
-
-
-
-
-
 /** End Product Detail **/ 
 
-// Sectin feedback
+// Section feedback
 
 let userTexts_detail = document.getElementsByClassName('section__feedback-user-text')
 let userPics_detail = document.getElementsByClassName('section__feedback-user')

@@ -1,14 +1,11 @@
-
-.brandSection__1, .brandSection__2, .brandSection__3{
+.giftSetSection__1, .giftSection__recent, .giftSetSection__3{
     margin: 0 5rem;
 }
-.brandSection__1-content{
+.giftSetSection__1-content{
     width: 70%;
 }
-
-/* Section product all */
 .section__pd-top{
-    height: var(--height-img-pd-brand);
+    height: var(--height-img-pd);
 }
 .panel__content{
     display: block;
@@ -84,30 +81,6 @@
     background: var(--color-black);
     cursor: pointer;
 }
-
-/* pagination */
-.pagination {
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-  }
-  
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-}
-  
-.pagination a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-.pagination__active{
-    background: var(--color-light-yellow);
-}
-/* End */
 .brandSection__3-img-content{
     text-align: center;
 }

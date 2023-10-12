@@ -5,6 +5,7 @@
     --height-img-banner: 650px;
     --height-img-pd: 420px;
     --height-img-pd-brand: 325px;
+    --height-img-explore: 550px;
 
 
     --color-white:#ffffff;
@@ -40,6 +41,7 @@
     --fs-12: 12px;
     --fs-14: 14px;
     --fs-16: 16px;
+    --fs-18: 18px;
     --fs-20: 20px;
     --fs-24: 24px;
     --fs-28: 28px;
@@ -69,10 +71,11 @@ a:hover{
     text-decoration: none;
     color: var(--color-black);
 }
-.container-fluid{
+.container-fluid, .row{
     padding: 0;
     margin: 0;
 }
+
 
 
 
@@ -90,7 +93,7 @@ a:hover{
 
 
 .template__des-1{
-    letter-spacing: .1em;
+    letter-spacing: 1px;
     font-size: var(--fs-16);
     font-weight: 500;
 }
@@ -100,7 +103,7 @@ a:hover{
     margin: 1.5rem 0;
 }
 .template__des-3{
-    letter-spacing: .1em;
+    letter-spacing: 1px;
     font-size: var(--fs-20);
     font-weight: 500;
 }
@@ -123,6 +126,340 @@ a:hover{
 
 
 
+.nav__des-center{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 20rem;
+    color: var(--color-white);
+}
+
+/* Navbar */
+
+
+/* Navbar Drop Menu Brand & Explore */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    background-color: var(--color-white);
+    min-width: 190px;
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: var(--color-black);
+    /* opacity: .7; */
+    font-size: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown__content-detail{
+    position: relative;
+  }
+.dropdown__content-detail::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    position: absolute;
+    left: 0;
+    bottom: -.2rem;
+    transition: width .3s;
+}
+
+.dropdown-content a:hover .dropdown__content-detail::after{
+    width: 100%;
+  }
+  
+  
+.dropdown:hover .dropdown-content {display: block;}
+
+/* End Navbar Drop Menu Brand & Explore */
+
+
+/* Drop Menu Skincare */
+.skincare_menu{
+    position: relative;
+}
+.fall__down{
+    display: none;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 11rem;
+    background: var(--color-white);
+    padding: 5rem 0 0 0;
+    transition: width 1s;
+    z-index: 1;
+
+    
+
+}
+.skincare__dropMenu:hover .fall__down{
+    transition: max-height .5s;
+    display: block;
+}
+.skincare__menu-img1{
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+}
+.skincare__menu-img2{
+    height: 343px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.skincare__menu-list li{
+    list-style: none;
+    padding: .5rem 0;
+}
+.skincare__drop-detail{
+    list-style: none;
+    font-size: 12px;
+    padding: .5rem 0;
+    position: relative;
+    
+}
+.skincare__drop-detail::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    position: absolute;
+    left: 0;
+    bottom: 0.8rem;
+    transition: width .3s;
+}
+.skincare__drop-detail:hover .skincare__drop-detail::after{
+    width: 100%;
+}
+
+
+
+
+.skincare__menu-title{
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: .6;
+}
+.skincare__dropMenu-btn{
+    text-align: center;
+    background: transparent;
+    color: var(--color-black);
+    padding: .5rem 2rem;
+    border: none;
+    margin: 2rem 0;
+    font-size: var(--fs-12);
+    letter-spacing: .2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* border-bottom: solid 1px rgba(33, 35, 38, .5); */
+
+    
+}
+
+.skincare__menu-right-b1{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.skincare__dropMenu-tagline{
+    font-size: var(--fs-14);
+    opacity: .9;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+.skincare__menu-right-b2{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+}
+
+.change__color{
+    color: var(--color-white);
+}
+
+/* End Drop Menu Skincare */
+
+
+.menu__navbar:hover {
+    background: var(--color-white);
+    border-radius: 0;
+    transition: all .5s ease-in-out;
+
+    
+}
+.menu__navbar:hover .navbar__langues-option, .navbar-brand {
+    color:var(--color-black);
+}
+.menu__navbar:hover  .navbar-brand {
+    color:var(--color-black);
+}
+.menu__navbar:hover .navbar__select-icon, .navbar__select-icon-down{
+    color:var(--color-black);
+}
+.menu__navbar:hover .navbar__select-icon-down{
+    color:var(--color-black);
+}
+.menu__navbar:hover .navbar__logo-white{
+    display: none;
+}
+.menu__navbar:hover .navbar__logo-black{
+    display: block;
+}
+.navbar__logo-black{
+    display: none;
+}
+
+.navbar__1{
+    width: 100%;
+    display: flex;
+    
+}
+.bg__menu{
+    max-height: var(--height-img);
+    object-fit: cover;
+    position: relative;
+}
+.bg__menu-img{
+    height: var(--height-img) !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.menu__navbar{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 135px;
+    align-items: center;
+    padding: 1rem 5rem;
+    
+    
+}
+.navbar-brand, .navbar__langues-option{
+    color: var(--color-white);
+
+}
+.navbar__1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__select-icon{
+    font-size: var(--fs--icon-md);
+    margin: 0 1rem;
+    color: var(--color-white);
+}
+.navbar__select-icon-down{
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    color: var(--color-white);
+}
+.navbar__2{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.navbar-brand{
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: var(--fs-12);
+    
+}
+.navbar-title{
+    position: relative;
+    width: fit-content;
+    text-transform: uppercase;
+}
+.navbar-title::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    opacity: .2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width .3s;
+}
+.navbar-title:hover:after{
+    width: 100%;
+}
+.nav__des-left{
+    text-align: start;
+    position: absolute;
+    right: 0;
+    left: 5rem;
+    bottom: 10rem;
+    color: var(--color-white);
+}
+.nav__des-mid{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 10rem;
+    color: var(--color-white);
+}
+.nav__des-right{
+    text-align: end;
+    position: absolute;
+    right: 5rem;
+    bottom: 10rem;
+    color: var(--color-white);
+}
+/* .nav__des-1, .nav__des-2,.nav__des-button{
+    text-align: center;
+} */
+.nav__des-2{
+    font-size: var(--fs-nav-des-1);
+}
+.nav__des-button{
+    margin-top: var(--pd-nav__des-button);
+}
+.nav__des-view{
+    text-decoration: none;
+    padding: 1.8rem 6rem;
+    background: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-black);
+    opacity: 8;
+}
+
+.main{
+    background: var(--color-white);
+}
+
+
+.carousel__pg{
+    list-style: none;
+}
+/* End Navbar */
 
 
 .section__pd-brand{
@@ -135,12 +472,11 @@ a:hover{
     font-size: var(--fs-12);
     padding: 1rem 0;
     margin: 0;
-    letter-spacing: .1rem;
+    letter-spacing: 1px;
     color: var(--color-light-black);
     opacity: .8;
     line-height: 14px;
     text-align: start;
-    margin-left: -10px;
 }
 
 .section__title{
@@ -175,7 +511,6 @@ a:hover{
 /* Section product */
 .section__product {
     margin: 2.25rem 5rem;
-    padding: 0 3.125rem;
     text-align: center;
 }
 
@@ -445,7 +780,7 @@ a:hover{
     margin: auto 0;
     font-size: var(--fs-16);
     font-weight: 500;
-    letter-spacing: .1rem;
+    letter-spacing: 1px;
     color: var(--color-white);
 }
 
@@ -543,23 +878,9 @@ a:hover{
     background-color: var(--color-black);
     opacity: .2;
 }
-/* Footer */
 .footer{
-    margin: 0 5rem 4.375rem 5rem;
-    /* position: relative; */
+    margin: 0 5rem;
 }
-/* .footer::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-black);
-    opacity: .2;
-    left: 0;
-    top: 0;
-    transition: width .3s;
-
-} */
 .footer-p{
     font-size: var(--fs-12);
     letter-spacing: .1rem;
@@ -574,6 +895,7 @@ a:hover{
     border-bottom: solid 1px rgba(33, 35, 38, .5);
     margin: 1rem 0;
     font-size: 12px;
+    background: transparent;
     /* list-style: none; */
 }
 .footer__right-icon{
@@ -590,7 +912,7 @@ a:hover{
     margin: 0 5px;
 }
 .footer__bot{
-    margin: 2rem 0;
+    margin: 8rem 0 4rem 0 !important;
 }
 .footer__bot-left{
     padding: 0;
@@ -657,12 +979,20 @@ a:hover{
         transform: scale(1);
     }
 }
-@keyframes headerNotifyGrowth {
-    from {
+@keyframes menu-animation {
+    0% {
+        width: 0;
         opacity: 0;
-        transform: scale(0);
-    }to {
+        background: var(--color-white);
+    }
+    50% {
+        width: 50%;
+        opacity: .5;
+        background: var(--color-white);
+    }
+    100%{
+        width: 100%;
         opacity: 1;
-        transform: scale(1);
+        background: var(--color-white);
     }
 }

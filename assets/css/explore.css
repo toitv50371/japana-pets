@@ -1,0 +1,55 @@
+body, .main{
+    background: var(--color-light-white);
+}
+
+
+
+.exploreSection__1-content{
+    width: 70%;
+}
+.exploreSection__1{
+    margin: 0 5rem;
+    padding-top: 5rem;
+}
+.section__title{
+    line-height: 30px;
+    margin:  2rem 0;
+    font-size: var(--fs-38);
+    font-weight: 500;
+    text-align: start;
+}
+/* .section__padding{
+    padding: 4.75rem 0 0 0 !important;
+} */
+
+
+/* section 3 */
+.exploreSection__3{
+    margin: 0 5rem;
+}
+.section__left{
+    margin: auto;
+    padding: 3.125rem 5rem;
+}
+.section__content{
+    display: flex;
+}
+.exploreSection__3 .template__des-4{
+    padding-top: 1rem;
+}
+.explore__img{
+    height: var(--height-img-explore);
+    object-fit: cover;
+}
+/* Section 5 */
+
+/* Section 17 */
+.exploreSection__5-content{
+    position: relative;
+}
+.exploreSection__5-map{
+    width: 100%;
+    height: var(--height-map);
+    border: none;
+    
+}

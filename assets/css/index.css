@@ -130,9 +130,7 @@
     bottom: 10rem;
     color: var(--color-white);
 }
-/* .nav__des-1, .nav__des-2,.nav__des-button{
-    text-align: center;
-} */
+
 .nav__des-2{
     font-size: var(--fs-nav-des-1);
 }
@@ -253,11 +251,10 @@
 
 
 /* Section 5 */
-.section__5, .section__8, .section__9{
-    margin: 2.25rem 5rem;
-    padding: 4.75rem 3.125rem;
-    
+.section__5 .row{
+    margin: 0;
 }
+
 .section__content{
     display: flex;
     background: var(--color-light-white);
@@ -286,9 +283,11 @@
 /* Section 6 */
 
 .section__6{
-    margin: 2.25rem 5rem;
-    padding: 4.75rem 3.125rem;
+    margin: 0 5rem;
     text-align: center;
+}
+.section__6 .row{
+    margin: 0;
 }
 .section__pd-top{
     position: relative;
@@ -363,6 +362,15 @@ input[name='r']{
 
 /* End Section 6 */
 /* Section 8 */
+.section__8{
+    margin: 0 5rem;
+}
+.section__8 .section__content{
+    background: var(--color-white);
+}
+.section__8 .section__left{
+    /* padding: 0; */
+}
 .section__btn{
     background: var(--color-light-yellow);
     color: var(--color-light-black);
@@ -375,10 +383,20 @@ input[name='r']{
 }
 
 /* End Section 8 */
+/* Section 9 */
+.section__9{
+    margin: 0 5rem;
+}
+.section__9 .row{
+    margin: 0;
 
+}
+/* End section 9 */
 
 /* Section 10 */
-
+.section__10 .row{
+    margin: 0;
+}
 .section__10-content{
     background: var(--color-light-orian);
     
@@ -481,12 +499,13 @@ div.section__10-panel::after:nth-child(4){
 /* Section 11 */
 .section__11{
     height: var(--height-img);
-    width: 100%;
     overflow: hidden;
+    margin: 2.25rem 5rem;
+    padding: 4.75rem 0;
 }
 .section__11-content{
     position: relative;
-    margin: 0 5rem;
+    
 }
 .section__11-img{
     width: 100%;
