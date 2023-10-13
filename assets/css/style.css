@@ -996,3 +996,98 @@ a:hover{
         background: var(--color-white);
     }
 }
+
+
+@keyframes zoom-fade {
+    0% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes zoom-fade-small {
+    0% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes appear-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes appear-up {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0
+    }
+    to {
+      opacity: 1
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1
+    }
+    to {
+      opacity: 0
+    }
+  }
+  
+  @keyframes preloading {
+    0%, 44%, 88.1%, 100% {
+          transform-origin: left;
+      }
+      
+      0%, 100%, 88% {
+          transform: scaleX(0);
+      }
+      
+      44.1%, 88% {
+          transform-origin: right;
+      }
+      
+      33%, 44% {
+          transform: scaleX(1);
+      }
+  }
+  

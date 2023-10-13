@@ -1,17 +1,3 @@
-
-
-
-
-/** Brand **/ 
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("value__price");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
 // Dropdown
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -43,7 +29,6 @@ activeImg.forEach(event => {
     event.addEventListener('click', function(){
         activeImg.forEach(event => event.classList.remove('active'))
         this.classList.add('active')    
-        console.log('test')
     })
 })
 
@@ -80,10 +65,6 @@ function showReviewpdDetail(){
     userPics_detail[i].classList.add('active-pic')
     userTexts_detail[i].classList.add('active-text')
 }
-
-
-
-
 /** Index **/ 
 
 // Section 6
@@ -95,9 +76,6 @@ section6Btn.forEach(event => {
     })
 })
 
-
-
-
 // 
 
 function section11slide(){
@@ -108,3 +86,13 @@ function section11slide(){
 
 /** End Index **/ 
 
+
+/** Brand **/ 
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("value__price");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}

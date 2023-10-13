@@ -1,6 +1,6 @@
 
 .menu__navbar:hover {
-    background: var(--color-white);
+    animation: menu-animation 1s ease-in;
     border-radius: 0;
     
 }
