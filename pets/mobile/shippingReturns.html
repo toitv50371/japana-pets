@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../assets_global/bootstrap5/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets_global/animation/animation.css">
+    <link rel="stylesheet" href="assets/css/stylescss.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="" style="background: var(--color-white);">
+            <nav id="navbar" class="navbar navbar-light bg-gradient position-relative py-0 " style="z-index: 1;">
+                <div class="container-fluid p-0">
+                    <!-- menu top -->
+                    <div id="menu__sticky" class="bg-white w-100" style="top: 0; padding: .5rem 0;
+                    transition: top 0.3s;">
+                        <div class="container">
+                            <div class="row d-flex align-items-center h-100">
+                                <div class="col-3">
+                                    <i class="fa-solid fa-bars fs-6 sidebar__open"></i>
+                                </div>
+                                <div class="col-6 ">
+                                    <a href="index.html" class="d-flex justify-content-center">
+                                        <img src="../img/logo.svg" alt="" class="">
+                                    </a>
+                                </div>
+                                <div class="col-3 text-end cart__toggle">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="../img/cart.svg" alt="" style="width: 20px; height: 20px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mt-2">
+                            <div class="p-2 d-flex align-items-center w-100" style="border-radius: 5px; background: var(--color-light-white);">
+                                <i class="fa-solid fa-magnifying-glass mx-2"></i>
+                                <input class="bg-transparent" type="text" style="width: 90%; border: none;" placeholder="Search for....">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Cart -->
+                 <div class="cart__modal close position-fixed top-0 end-0 bottom-0" style="z-index: 9;">
+                    <div class="bg__overlay position-absolute w-100" style="height: 100%; background:  var(--bg--overplay);"></div>
+                    <div class="cart__content position-absolute top-0 end-0" style="width: 90%;;z-index: 4; height: 100vh; background: var(--color-white);">
+                        <div class="d-flex justify-content-end p-3" style=" border-top: solid 1px rgba(128, 128, 128, 0.277);">
+                            <i class="fa-solid fa-xmark fs-2 cart__icon-close " style="cursor: pointer;"></i>
+                        </div>
+                        <div class="d-flex align-items-center h-100" >
+                            <!-- cart bot -->
+                           <div class="">
+                            <div class="pb-5 text-center">
+                                <a href="#">
+                                    <img src="../img/cart.svg" class="mx-auto text-opacity" alt="" style="width: 80px;">
+                                </a>
+                                <h4 class="my-4">Your cart is empty</h4>
+                                <button class="btn btn-dark px-5 py-3 fw-bold" style="background: var(--color-yellow); border: none; color: var(--color-base);">Continue shopping</button>
+                                <h4 class="my-4">Have an account?</h4>
+                                <p class="text-opacity"><a href="login" class="" style="border-bottom: solid 1px;"><strong>Log in</strong></a> to check out faster.</p>
+                            </div>
+                            <div class="" style="border-top: solid 1px rgba(128, 128, 128, 0.277);">
+                                <div class="container">
+                                    <h6 class="my-4">TOP PRODUCTS OF THIS WEEK</h6>
+                                    <div id="carouselCart" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active position-relative" data-bs-target="1">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <img src="../img/cart__1.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                                        <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                                        <p style="font-size: .9rem;">Tropical flakes</p>
+                                                        <p class="" style="font-size: .9rem;">From $10.99 USD</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <img src="../img/cart__2.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                                        <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                                        <p style="font-size: .9rem;">Live centipede</p>
+                                                        <p class="" style="font-size: .9rem;">From $10.99 USD</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item position-relative"  data-bs-target="2">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <img src="../img/cart__3.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                                        <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                                        <p style="font-size: .9rem;">Live crickets - large</p>
+                                                        <p class="" style="font-size: .9rem;">From $7.25 USD</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <img src="../img/cart__4.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                                        <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                                        <p style="font-size: .9rem;">Waterproof dog suit</p>
+                                                        <p class="" style="font-size: .9rem;">From $10.99 USD</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-4 carousel-indicators" style="position: static; margin: 0;">
+                                            <div class="row">
+                                                <div class="col-4 ms-0">
+                                                    <p style="height: 12px; width: 12px; background-color: var(--color-base); border-radius: 50%;" data-bs-target="#carouselCart" data-bs-slide-to="0" class="active" aria-label="Slide 1"></p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p style="height: 12px; width: 12px; background-color: var(--color-base); border-radius: 50%;" data-bs-target="#carouselCart" data-bs-slide-to="1" class="" aria-label="Slide 2"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Sidebar -->
+                <div class="sidebar__modal close position-fixed top-0 start-0 bottom-0 end-0" style="overflow: auto; background: var(--color-white);">
+                    <div class="bg__overlay position-absolute w-100 h-100" style=" background: var(--bg--overplay); z-index: 1;"></div>
+                    <div class="sidebar__menu position-absolute top-0 start-0 h-100" style="z-index: 2; width: 90%; background: var(--color-white)" >
+                        <div class="d-flex justify-content-between">
+                            <i class="fa-solid fa-xmark fs-2 sidebar__close p-3" style="cursor: pointer;"></i>
+                        </div>
+                        <div class="position-relative" style="height: auto; max-height: 90%; overflow: auto; overflow-x: hidden; padding-bottom: 4rem;">
+                            <div class="d-flex justify-content-between p-3 ">
+                                <div class="sideBar__open-lv2 d-flex justify-content-between w-100" style="z-index: 2;">
+                                    <div class="d-flex align-items-center">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 8H9V10H7V8Z" fill="#142C73"></path>
+                                            <path d="M13 8H11V10H13V8Z" fill="#142C73"></path>
+                                            <path d="M11 14H9V16H11V14Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.917 15C15.441 17.8377 12.973 20 10 20C7.027 20 4.55904 17.8377 4.08296 15H0V9C0 4.02944 4.02944 0 9 0H11C15.9706 0 20 4.02944 20 9V15H15.917ZM16 13V7H14V14C14 16.2091 12.2091 18 10 18C7.79086 18 6 16.2091 6 14V7H4L4 13H2V9C2 5.13401 5.13401 2 9 2H11C14.866 2 18 5.13401 18 9V13H16Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Dog</h6>
+                                    </div>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="sideBar__lv2 position-absolute top-0 end-0 bg-white h-100 container" style="z-index: 3;">
+                                    <div class="d-flex align-items-center w-100 sideBar__close-lv2">
+                                        <i class="fa-solid fa-arrow-left py-3"></i>
+                                    </div>
+                                    <a href="dog.html"><h6 class="py-3">Dog</h6></a>
+                                    <div class="">
+                                        <a class="d-flex d-flex justify-content-between pt-3" data-bs-toggle="collapse" href="#pantry">
+                                            <p class="">Dog food</p>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="collapse" id="pantry" >
+                                            <div class="card card-body bg-transparent ps-0" style="border: none;">
+                                                <ul class="p-0 m-0" style="list-style: none;">
+                                                    <li class="my-2 animation-underline-thin"><a href="dogFood.html"><h6>Dog food</h6></a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="dryFood.html">Dry food</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="productDetail.html">Wet food</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="veterinaryDiets.html">Veterinary diets</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="productDetail.html">Puppy food</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="BDF.html">Best dog food</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="">
+                                        <a class="d-flex justify-content-between pt-3" data-bs-toggle="collapse" href="#homeGoods">
+                                            <p class="">Dog supplies</p>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="collapse" id="homeGoods">
+                                            <div class="card card-body bg-transparent ps-0" style="border: none;">
+                                                <ul class="p-0 m-0" style="list-style: none;">
+                                                    <li class="my-2 animation-underline-thin"><a href="dogSupplies.html"><h6>Dog supplies</h6></a></li>
+
+                                                    <li class="my-2 animation-underline-thin px-0"><a href="CAA.html">Clothes and accessories</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="beds.html">Beds</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="beds.html">Collars and leashes</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="beds.html">Crates and kennels</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="toys.html">Toys</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="">
+                                        <a class="d-flex justify-content-between pt-3" data-bs-toggle="collapse" href="#lighting">
+                                            <p class="" >Health & wellness</p>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="collapse" id="lighting">
+                                            <div class="card card-body bg-transparent ps-0" style="border: none;">
+                                                <ul class="p-0 m-0" style="list-style: none;">
+                                                    <li class="my-2 animation-underline-thin"><a href="healthWellness.html"><h6>Health & wellness</h6></a></li>
+                                                    <li class="my-2 animation-underline-thin px-0"><a href="vitamins.html">Vitamins</a></li>
+                                                    <li class="my-2 animation-underline-thin"><a href="supplements.html">Supplements</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="">
+                                        <a class="d-flex justify-content-between pt-3" data-bs-toggle="collapse" href="#rugs">
+                                            <p class="" >Shop by brand</p>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="collapse" id="rugs">
+                                            <div class="card card-body bg-transparent ps-0" style="border: none;">
+                                                <ul class="p-0 m-0" style="list-style: none;">
+                                                    <li class="my-2 animation-underline-thin px-0"><a href="brands.html"><h6>Shop by brand</h6></a></li>
+                                                    <li class="my-2 animation-underline-thin px-0"><a href="petsy.html">Petsy</a></li>
+                                                    <li class="my-2 animation-underline-thin px-0"><a href="petify.html">Petify</a></li>
+                                                    <li class="my-2 animation-underline-thin px-0"><a href="pure.html">Pure</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                
+                                    
+                                </div>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="cat.html" class="d-flex align-items-center w-100">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 9H9V11H7V9Z" fill="#142C73"></path>
+                                        <path d="M11 9H13V11H11V9Z" fill="#142C73"></path>
+                                        <path d="M9 13H11V15H9V13Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L6.09091 4H13.9091L20 0V11C20 13.3869 18.9464 15.6761 17.0711 17.364C15.1957 19.0518 12.6522 20 10 20C7.34784 20 4.8043 19.0518 2.92893 17.364C1.05357 15.6761 0 13.3869 0 11V0ZM14.5071 6L18 3.70615V11C18 12.7844 17.2142 14.5444 15.7331 15.8774C14.2451 17.2166 12.1858 18 10 18C7.81423 18 5.7549 17.2166 4.26686 15.8774C2.78577 14.5444 2 12.7844 2 11V3.70615L5.4929 6H14.5071Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2">Cat</h6>
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="fish.html" class=" d-flex align-items-center w-100">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9H4V11H6V9Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 3C11.7007 3 14.5031 4.84639 16.0479 7.609C16.9907 6.14058 18.3747 5.01132 20 4.43164V6.60876C18.681 7.28634 17.6226 8.48781 17.0901 10C17.6226 11.5123 18.681 12.7137 20 13.3913V15.5684C18.3747 14.9887 16.9907 13.8595 16.0479 12.391C14.503 15.1536 11.7007 17 8.5 17C4.44475 17 1.02893 14.0361 0 10C1.02893 5.96394 4.44475 3 8.5 3ZM2.08063 10C3.04965 12.998 5.63205 15 8.5 15C11.3679 15 13.9504 12.998 14.9194 10C13.9503 7.00202 11.3679 5 8.5 5C5.63205 5 3.04965 7.00202 2.08063 10Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2 ">Fish</h6>
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="smallPet.html" class=" d-flex align-items-center w-100">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 11V9H7V11H9Z" fill="#142C73"></path>
+                                        <path d="M13 9H11V11H13V9Z" fill="#142C73"></path>
+                                        <path d="M11 15V13H9V15H11Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0111 4.11112C10.8102 2.26286 12.6817 1 14.8 1C17.6184 1 20 3.23559 20 6.11111C20 7.97785 18.9949 9.57604 17.5191 10.4669C17.5724 10.8225 17.6 11.1861 17.6 11.5556C17.6 15.7197 14.1439 19 10 19C5.85612 19 2.4 15.7197 2.4 11.5556C2.4 11.1861 2.42762 10.8225 2.48095 10.4669C1.0051 9.57604 0 7.97785 0 6.11111C0 3.23559 2.3816 1 5.2 1C7.31828 1 9.18982 2.26286 9.98892 4.11112L10 4.11111L10.0111 4.11112ZM11.602 6C11.6232 5.41265 11.8119 4.86672 12.123 4.40595C12.6948 3.55916 13.6802 3 14.8 3C16.5673 3 18 4.39289 18 6.11111C18 7.04382 17.5778 7.88067 16.9091 8.45089C16.4061 8.87983 15.7636 9.1579 15.0563 9.21239C15.3501 9.81067 15.5349 10.4693 15.5857 11.1639C15.5952 11.2933 15.6 11.4239 15.6 11.5556C15.6 14.5624 13.0928 17 10 17C6.90721 17 4.4 14.5624 4.4 11.5556C4.4 11.4239 4.40481 11.2933 4.41427 11.1639C4.46506 10.4693 4.64987 9.81067 4.94372 9.21239C4.23645 9.1579 3.59391 8.87984 3.09087 8.45089C2.42217 7.88067 2 7.04382 2 6.11111C2 4.39289 3.43269 3 5.2 3C6.31975 3 7.30518 3.55916 7.87698 4.40595C8.18812 4.86672 8.37679 5.41265 8.398 6H11.602Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2 ">Small pet</h6> 
+                                    <span class="bg-danger text-light ms-2" style="border-radius: 5px; font-size: .7rem; padding: .1rem .4rem ;">sale</span>
+                                
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="bird.html" class="d-flex align-items-center">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 6V4H13V6H15Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16H8.04686L9.79686 18H8V20H15V18H12.4544L10.7044 16H11C11.9193 16 12.8295 15.8189 13.6788 15.4672C14.5281 15.1154 15.2997 14.5998 15.9497 13.9497C16.5998 13.2997 17.1154 12.5281 17.4672 11.6788C17.8189 10.8295 18 9.91925 18 9V6H20V4H18V3.5C18 1.567 16.433 0 14.5 0C14.3302 0 14.1633 0.012086 14 0.0354444C13.2459 0.143305 12.5694 0.491523 12.0505 1L12.0279 1.02234L12 1.05051V1L0 16ZM13.2788 2.60303L4.16125 14H11C11.6566 14 12.3068 13.8707 12.9134 13.6194C13.52 13.3681 14.0712 12.9998 14.5355 12.5355C14.9998 12.0712 15.3681 11.52 15.6194 10.9134C15.8707 10.3068 16 9.65661 16 9V3.5C16 2.67157 15.3284 2 14.5 2C14.0799 2 13.7031 2.1701 13.4285 2.45031L13.2788 2.60303Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2">Bird</h6>
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="reptile.html" class="d-flex align-items-center">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9002 5.43916C10.8258 5.54695 10.7341 5.63936 10.6292 5.71029C10.6844 5.85177 10.7685 5.9791 10.8745 6.08524C11.076 6.28716 11.3565 6.41238 11.6667 6.41238H12.2222C12.3655 6.41238 12.5063 6.42307 12.6437 6.44368C13.9778 6.64378 15 7.77895 15 9.14936C15 10.661 13.7563 11.8864 12.2222 11.8864H7.77778C7.16413 11.8864 6.66667 12.3765 6.66667 12.9812L6.66667 15.1707L5 16.2655V12.9812C5 11.4696 6.24365 10.2442 7.77778 10.2442H12.2222C12.8359 10.2442 13.3333 9.754 13.3333 9.14936C13.3333 8.54473 12.8359 8.05457 12.2222 8.05457H11.6667C10.4965 8.05457 9.49525 7.34158 9.0861 6.33243C9.01422 6.15513 8.96061 5.96869 8.92757 5.77536C8.59113 5.6109 8.3587 5.23902 8.33528 4.8194C8.32828 4.69393 8.33997 4.56419 8.37315 4.43444L8.78146 2.83787C9.05585 1.76497 10.3886 1.76497 10.663 2.83787L11.0713 4.43444C11.1652 4.80159 11.087 5.16874 10.9002 5.43916ZM7.17433 6.94569C6.4424 6.14894 6.16485 4.98895 6.4375 3.92285L6.84581 2.32627C7.20536 0.920394 8.38288 0 9.72222 0C11.0616 1.21188e-07 12.2391 0.920394 12.5986 2.32627L13.0069 3.92284C13.0524 4.10067 13.0827 4.28038 13.0982 4.46008C15.2802 4.86721 17 6.76669 17 9.14936C17 11.8433 14.8015 13.9195 12.2222 13.9195H8.66667L8.66667 16.2777L3 20V12.9812C3 10.2872 5.19846 8.21097 7.77778 8.21097H7.86676C7.57662 7.8319 7.34144 7.4066 7.17433 6.94569Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2 ">Reptile</h6>
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="brands.html" class="d-flex align-items-center">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15L17 20V0H3V20L10 15ZM5 16.1136L10 12.5422L15 16.1136V2H5V16.1136Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2">Brands</h6>
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="pharmacy.html" class="d-flex align-items-center">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3552 1.49309C19.3148 3.48387 19.3148 6.71156 17.3552 8.70234L17.2876 8.77108C18.9216 9.86501 20 11.7459 20 13.8827C20 17.2612 17.3042 20 13.9788 20C11.8756 20 10.0242 18.9044 8.94746 17.2443L8.56565 17.6322C6.60614 19.623 3.42914 19.623 1.46963 17.6322C-0.489878 15.6414 -0.489877 12.4137 1.46963 10.423L10.2592 1.49309C12.2187 -0.497695 15.3957 -0.497695 17.3552 1.49309ZM15.936 7.26049L15.2948 7.91202C14.8712 7.81609 14.4308 7.76549 13.9788 7.76549C12.6782 7.76549 11.4738 8.18449 10.4894 8.89687L8.14977 6.51991L11.6784 2.93494C12.8541 1.74047 14.7603 1.74047 15.936 2.93494C17.1117 4.1294 17.1117 6.06602 15.936 7.26049ZM6.73057 7.96176L9.07038 10.3389C8.36973 11.3388 7.95766 12.5619 7.95766 13.8827C7.95766 14.342 8.00747 14.7894 8.10189 15.2197L7.14644 16.1904C5.97074 17.3848 4.06454 17.3848 2.88883 16.1904C1.71313 14.9959 1.71313 13.0593 2.88884 11.8648L6.73057 7.96176ZM14.9824 17.8324C16.7137 17.3797 17.9929 15.783 17.9929 13.8827C17.9929 11.9825 16.7137 10.3858 14.9824 9.93305V17.8324ZM12.9753 17.8324V9.93305C11.244 10.3858 9.96472 11.9825 9.96472 13.8827C9.96472 15.783 11.244 17.3797 12.9753 17.8324Z" fill="#142C73"></path>
+                                    </svg>
+                                    <h6 class="ms-2">Pharmacy</h6>
+                                    
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between p-3">
+                                <div class="sideBar__open-lv2 d-flex justify-content-between w-100" style="z-index: 2;">
+                                    <div class="d-flex align-items-center">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 1.00043V20.0004H18V11.0004H14V9.00043H18V7.00043H14V5.00043H18V3.00043H14V1.00043H20Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.39043 9.99684L5.06546 13.3692C4.59441 13.1332 4.06271 13.0004 3.5 13.0004C1.567 13.0004 0 14.5674 0 16.5004C0 18.4334 1.567 20.0004 3.5 20.0004C5.433 20.0004 7 18.4334 7 16.5004C7 15.9235 6.86039 15.3791 6.61312 14.8993L7.46484 12.7315L8.31657 14.8993C8.06929 15.3791 7.92969 15.9235 7.92969 16.5004C7.92969 18.4334 9.49669 20.0004 11.4297 20.0004C13.3627 20.0004 14.9297 18.4334 14.9297 16.5004C14.9297 14.5674 13.3627 13.0004 11.4297 13.0004C10.867 13.0004 10.3353 13.1332 9.86423 13.3692L8.53926 9.99684L11.9302 1.36613L10.0687 0.634766L7.46484 7.26223L4.86095 0.634766L2.99947 1.36613L6.39043 9.99684ZM3.5 18.0004C2.67157 18.0004 2 17.3289 2 16.5004C2 15.672 2.67157 15.0004 3.5 15.0004C4.32843 15.0004 5 15.672 5 16.5004C5 17.3289 4.32843 18.0004 3.5 18.0004ZM11.4297 18.0004C12.2581 18.0004 12.9297 17.3289 12.9297 16.5004C12.9297 15.672 12.2581 15.0004 11.4297 15.0004C10.6013 15.0004 9.92969 15.672 9.92969 16.5004C9.92969 17.3289 10.6013 18.0004 11.4297 18.0004Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Pet services</span>
+                                    </div>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="sideBar__lv2 position-absolute top-0 end-0 bg-white h-100 container" style="z-index: 3;">
+                                    <div class="d-flex align-items-center w-100 sideBar__close-lv2">
+                                        <i class="fa-solid fa-arrow-left py-3"></i>
+                                    </div>
+                                    <a href="petServices.html"><h6 class="py-3">Pet services</h6></a>
+                                    <div class="">
+                                        <ul class="p-0 m-0" style="list-style: none;">
+                                            <li class="py-1"><a href="grooming.html" class="animation-underline-thin">Grooming</a></li>
+                                            <li class="py-1"><a href="petServices.html" class="animation-underline-thin">Veterinary services</a></li>
+                                            <li class="py-1"><a href="petsHotel.html" class="animation-underline-thin">Pets hotel</a></li>
+                                        </ul>
+                                    </div>
+                                
+                                    
+                                </div>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="petServices.html" class="d-flex align-items-center">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1892_5477)">
+                                        <path d="M13.8 6.6L7.8 14.6L6.2 13.4L12.2 5.4L13.8 6.6Z" fill="#142C73"></path>
+                                        <path d="M8 6H6V8H8V6Z" fill="#142C73"></path>
+                                        <path d="M12 12H14V14H12V12Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10ZM2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10Z" fill="#142C73"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1892_5477">
+                                        <rect width="20" height="20" fill="white"></rect>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    
+                                    <h6 class="ms-2 ">Sale</h6>
+                                </a>
+                            </div>
+                            <div class="d-flex p-3">
+                                <a href="new.html" class="d-flex align-items-center">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1892_5494)">
+                                        <path d="M9.252 13.398L13.7258 8.68875L12.2758 7.31125L9.1496 10.602L7.67347 9.26006L6.32812 10.7399L9.252 13.398Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.26933 5.69829C1.85802 3.08809 4.37577 0.845426 6.94007 1.72305C8.31835 -0.574349 11.6811 -0.574349 13.0594 1.72305C15.6237 0.845427 18.1415 3.08808 17.7301 5.69829C20.2327 6.67145 20.7858 10.005 18.7838 11.7591C20.0602 14.0755 18.4477 17.0425 15.7441 17.0992C15.2385 19.7067 12.0988 20.919 9.99973 19.2199C7.90067 20.919 4.76097 19.7067 4.25534 17.0992C1.55173 17.0425 -0.0607274 14.0755 1.21571 11.7591C-0.786283 10.005 -0.233265 6.67145 2.26933 5.69829ZM8.56729 2.91729C9.14009 1.69424 10.8594 1.69424 11.4322 2.91729C11.8039 3.71092 12.7368 4.05464 13.5254 3.68853C14.7408 3.12432 16.0579 4.24302 15.7201 5.55265C15.5008 6.40244 15.9972 7.27276 16.8339 7.50547C18.1232 7.86411 18.4217 9.57807 17.3313 10.3615C16.6238 10.8698 16.4514 11.8595 16.9445 12.5821C17.7045 13.6958 16.8448 15.203 15.5121 15.0937C14.6473 15.0227 13.8868 15.6687 13.8056 16.5431C13.6806 17.8907 12.065 18.486 11.1135 17.535C10.4961 16.9179 9.50335 16.9179 8.88594 17.535C7.93445 18.486 6.31884 17.8907 6.19382 16.5431C6.1127 15.6687 5.3522 15.0227 4.48739 15.0937C3.15464 15.203 2.29499 13.6958 3.05495 12.5821C3.54807 11.8595 3.37568 10.8698 2.66813 10.3615C1.57773 9.57807 1.87628 7.86411 3.16561 7.50547C4.00225 7.27276 4.49863 6.40245 4.27941 5.55265C3.94156 4.24302 5.25862 3.12432 6.47404 3.68853C7.26271 4.05464 8.19561 3.71092 8.56729 2.91729Z" fill="#142C73"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1892_5494">
+                                        <rect width="20" height="20" fill="white"></rect>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    
+                                    <h6 class="ms-2 ">New</h6>
+                                </a>
+                            </div>
+                            <a href="aboutUs.html" class="d-flex align-items-center p-3 w-100">
+                                <p class="">About us</p>
+                            </a>
+                            <a href="locations.html" class="d-flex align-items-center p-3 w-100">
+                                <p class="">Locations</p>
+                            </a>
+                            <a href="ShippingReturns.html" class="d-flex align-items-center p-3 w-100">
+                                <p class="">Shipping</p>
+                            </a>
+
+                            <div class="d-flex p-3">
+                                <a href="login.html" class="d-flex align-items-center">
+                                    <img src="../img/user.svg" alt="">
+                                    
+                                    <h6 class="ms-2 ">Login</h6>
+                                </a>
+                            </div>
+                        </div>
+                            <!-- Sidebar bottom -->
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-white container" >
+                            <div class="d-flex align-items-center py-3" style="border-top: solid 1px gray; z-index: 4;">
+                                <img src="../img/phone.svg" alt="" style="width: 20px; height: 20px;">
+                                <h6 class="fs-5 ms-2">+84 123456789</h6>
+                            </div>
+                        </div>
+                
+                    </div> 
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <div class="main" style="margin-top: 6.5rem;">
+        <div class="path">
+            <div class="container">
+                <div class="d-flex align-items-center" style="font-size: .9rem;">
+                    <a href="index.html" class="animation-underline-thin">Home</a>
+                    <i class="fa-solid fa-angle-right mx-2" style="font-size: .8rem; opacity: .5;"></i>
+                    <p>Shipping & returns</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section__banner section__pd">
+            <div class="container text-center">
+                <h1>🚀 Shipping & returns</h1>
+                <p class=" mt-3" style="font-size: .9rem;">Hopefully you can find what you need below.
+                    If not, then please check our <strong>Help</strong> or <strong>Get in touch</strong>.</p>
+            </div>
+        </div>
+
+        <div class="section__service section__pd animate-show">
+            <div class="container">
+                <div class="" style="background: var(--color-yellow); border-radius: 10px;">
+                    <div class="row p-4" >
+                        <div class="col-12">
+                            <div class="p-3 text-center" style="height: 100%;">
+                                <img src="../img/check.svg" alt="" class="mx-auto mb-3" style="width: 48px; height: 48px;">
+                                <div class="ms-4">
+                                    <h5 class="pb-1">Free US shipping</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 text-center" style="height: 100%;">
+                                <img src="../img/box.svg" alt="" class="mx-auto mb-3" style="width: 48px; height: 48px;">
+                                <div class="ms-4">
+                                    <h5 class="pb-1">Next day delivery
+                                        available</h5>
+                                    <p style="font-size: .9rem;">If ordered before 2pm on weekdays.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 text-center" style="height: 100%;">
+                                <img src="../img/return.svg" alt="" class="mx-auto mb-3" style="width: 48px; height: 48px;">
+                                <div class="ms-4">
+                                    <h5 class="pb-1">100% money back
+                                        guarantee</h5>
+                                    <p style="font-size: .9rem;">If ordered before 2pm on weekdays.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 text-center" style="height: 100%;">
+                                <img src="../img/shipping.svg" alt="" class="mx-auto mb-3" style="width: 48px; height: 48px;">
+                                <div class="ms-4">
+                                    <h5 class="pb-1">Delivered anywhere
+                                        in the US</h5>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="section__shippingCost section__pd animate-show">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-5">Shipping costs</h3>
+                        <div class="row p-2 align-items-center" style="background: var(--color-light-white); border-radius: 5px;">
+                            <div class="col-4">
+                                <h6 class="me-3">Standard delivery</h6>
+                            </div>
+                            <div class="col-8">
+                                <p class="">3-5 working days FREE</p>
+                            </div>
+                        </div>
+                        <div class="row p-2 align-items-center" style="border-radius: 5px;">
+                            <div class="col-4">
+                                <h6 class="me-3">Special delivery</h6>
+                            </div>
+                            <div class="col-8">
+                                <p class="">Next day tracked $7.99</p>
+                            </div>
+                        </div>
+                        <div class="row p-2 align-items-center" style="background: var(--color-light-white); border-radius: 5px;">
+                            <div class="col-4">
+                                <h6 class="me-3">Repeat delivery</h6>
+                            </div>
+                            <div class="col-8">
+                                <p class=""><strong>5% OFF + FREE</strong> delivery (with standard delivery)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section__timings section__pd animate-show">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-5 text-center">Dispatch & delivery timings</h3>
+                        <div class="mb-4">
+                            <h5 class="mb-3">Monday to friday</h5>
+                            <p>Orders made Monday to Friday before 2pm each day will be dispatched the same day. Delivery arrival depends on the shipping level you choose (Standard or Next Day).</p>
+                        </div>
+                        <div class="">
+                            <h5 class="mb-3">Weekend deliveries</h5>
+                            <p>If you order by 2pm on a Friday and choose next day delivery, you'll receive your order on Saturday.</p>
+                            <p class="my-2">If you order after 2pm on the Friday, next day delivery will arrive on the Monday.</p>
+                            <p>Orders aren't processed on Saturday or Sunday, and deliveries aren't made on Sundays. Everyone needs their rest, after all!</p>
+                            <p class="my-2">Any orders placed at the weekend will be processed on Monday.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section__refundsReturns section__pd animate-show">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-5 text-center">Refunds & returns</h3>
+                        <div class="mb-4">
+                            <h5 class="mb-3">100% money back guarantee</h5>
+                            <p class="mb-3">Every 1 kg pack cat food comes with a 100% money back guarantee if your cat doesn't like it.</p>
+                            <p class="mb-3">Just submit a photo of your cat's food bowl (within 30 days of purchasing) showing that they didn't eat the kibble.</p>
+                            <p class="mb-3">You'll receive a full refund except for shipping costs.Please find more information in our terms & conditions.</p>
+                            <p class="mb-3">Please dispose of any uneaten kibble in your home compost bin, and the paper packaging in the paper recycling.</p>
+                        </div>
+                        <div class="">
+                            <h5 class="mb-3">14 day returns policy</h5>
+                            <p class="mb-3">If you change your mind about pet food, please contact <strong style="border-bottom: solid 2px var(--color-base);">customers@youremail.com</strong>
+                            </p>
+                            <p class="mb-3">You’ll need to return the product unopened and undamaged within 14 days of receiving it.</p>
+                            <p class="mb-3">You'll receive a full refund including original shipping costs, subject to terms and conditions. Postage of the return is not included in the refund.</p>
+                            <p class="mb-3">If you received a faulty product, please contact <strong style="border-bottom: solid 2px var(--color-base);">customers@youremail.com</strong> as soon as possible for a refund, a return & replacement (as long as your request meets the requirements laid out in the terms and conditions).</p>
+                            <p class="mb-3">Can't find what you're looking for? <strong style="border-bottom: solid 2px var(--color-base);">Get in touch.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section__backorders section__pd animate-show pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h3 class="mb-5 text-center">Backorders</h3>
+                        <div class="mb-4">
+                            <p class="mb-3">In the event that your order cannot be immediately fulfilled in its entirety, we will ship the items we have in stock and the remaining items will be canceled from your order. You may reorder once they become available again.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="section__bannerRun py-4 text-center " style="background: #deefff; overflow-x: hidden;">
+            <div class="bannerRun" style="width: max-content; overflow: hidden; animation: autoscroll 30s linear infinite;;">
+                <div class="d-flex">
+                    <div class="px-5 d-flex">
+                        <span class="me-5">
+                            <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 15C8.07553 15 6.45849 13.7252 6 12H8.21121C8.56827 12.5978 9.23564 13 10 13C10.7644 13 11.4317 12.5978 11.7888 12H14C13.5415 13.7252 11.9245 15 10 15Z" fill="#142C73"></path>
+                                <path d="M8 8.5C8 9.32843 7.32843 10 6.5 10C5.67157 10 5 9.32843 5 8.5C5 7.67157 5.67157 7 6.5 7C7.32843 7 8 7.67157 8 8.5Z" fill="#142C73"></path>
+                                <path d="M13.5 10C14.3284 10 15 9.32843 15 8.5C15 7.67157 14.3284 7 13.5 7C12.6716 7 12 7.67157 12 8.5C12 9.32843 12.6716 10 13.5 10Z" fill="#142C73"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10Z" fill="#142C73"></path>
+                            </svg>
+                        </span>
+                        <strong class="mx-4">MINION</strong>
+                        <p>is a category-defining health and wellness company focused on improving the lives of pets, pet parents.</p>
+                    </div>
+                    <div class="px-5 d-flex">
+                        <span class="me-5">
+                            <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 15C8.07553 15 6.45849 13.7252 6 12H8.21121C8.56827 12.5978 9.23564 13 10 13C10.7644 13 11.4317 12.5978 11.7888 12H14C13.5415 13.7252 11.9245 15 10 15Z" fill="#142C73"></path>
+                                <path d="M8 8.5C8 9.32843 7.32843 10 6.5 10C5.67157 10 5 9.32843 5 8.5C5 7.67157 5.67157 7 6.5 7C7.32843 7 8 7.67157 8 8.5Z" fill="#142C73"></path>
+                                <path d="M13.5 10C14.3284 10 15 9.32843 15 8.5C15 7.67157 14.3284 7 13.5 7C12.6716 7 12 7.67157 12 8.5C12 9.32843 12.6716 10 13.5 10Z" fill="#142C73"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10Z" fill="#142C73"></path>
+                            </svg>
+                        </span>
+                        <strong class="mx-4">MINION</strong>
+                        <p>is a category-defining health and wellness company focused on improving the lives of pets, pet parents.</p>
+                    </div>
+                    <div class="px-5 d-flex">
+                        <span class="me-5">
+                            <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 15C8.07553 15 6.45849 13.7252 6 12H8.21121C8.56827 12.5978 9.23564 13 10 13C10.7644 13 11.4317 12.5978 11.7888 12H14C13.5415 13.7252 11.9245 15 10 15Z" fill="#142C73"></path>
+                                <path d="M8 8.5C8 9.32843 7.32843 10 6.5 10C5.67157 10 5 9.32843 5 8.5C5 7.67157 5.67157 7 6.5 7C7.32843 7 8 7.67157 8 8.5Z" fill="#142C73"></path>
+                                <path d="M13.5 10C14.3284 10 15 9.32843 15 8.5C15 7.67157 14.3284 7 13.5 7C12.6716 7 12 7.67157 12 8.5C12 9.32843 12.6716 10 13.5 10Z" fill="#142C73"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10Z" fill="#142C73"></path>
+                            </svg>
+                        </span>
+                        <strong class="mx-4">MINION</strong>
+                        <p>is a category-defining health and wellness company focused on improving the lives of pets, pet parents.</p>
+                    </div>
+                    <div class="px-5 d-flex">
+                        <span class="me-5">
+                            <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 15C8.07553 15 6.45849 13.7252 6 12H8.21121C8.56827 12.5978 9.23564 13 10 13C10.7644 13 11.4317 12.5978 11.7888 12H14C13.5415 13.7252 11.9245 15 10 15Z" fill="#142C73"></path>
+                                <path d="M8 8.5C8 9.32843 7.32843 10 6.5 10C5.67157 10 5 9.32843 5 8.5C5 7.67157 5.67157 7 6.5 7C7.32843 7 8 7.67157 8 8.5Z" fill="#142C73"></path>
+                                <path d="M13.5 10C14.3284 10 15 9.32843 15 8.5C15 7.67157 14.3284 7 13.5 7C12.6716 7 12 7.67157 12 8.5C12 9.32843 12.6716 10 13.5 10Z" fill="#142C73"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10Z" fill="#142C73"></path>
+                            </svg>
+                        </span>
+                        <strong class="mx-4">MINION</strong>
+                        <p>is a category-defining health and wellness company focused on improving the lives of pets, pet parents.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="scroll__top d-none position-fixed end-0 bottom-0 m-3 py-2 px-3 bg-dark text-light" style="cursor: pointer;z-index: 5;"><i class="fa-solid fa-arrow-up"></i></div>
+    <footer class="footer">
+        <div class="section__mainFooter section__pd">
+            <div class="container">
+                <div class="" style="border-bottom: solid 1px var(--color-border);">
+                    <a class="d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#CORPORATE">
+                        <h6 class="">CORPORATE</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <div class="collapse" id="CORPORATE">
+                        <div class="card card-body bg-transparent ps-0" style="border: none;">
+                            <ul class="p-0 m-0" style="list-style: none;">
+                                <li class="py-1"><a href="aboutUs.html" class="animation-underline-thin fw-lighter">About</a></li>
+                                <li class="py-1"><a href="contactUs.html" class="animation-underline-thin fw-lighter">Contact Us</a></li>
+                                <li class="py-1"><a href="locations.html" class="animation-underline-thin fw-lighter">Locations</a></li>
+                                <li class="py-1"><a href="blog.html" class="animation-underline-thin fw-lighter">Blog</a></li>
+                                <li class="py-1"><a href="grooming.html" class="animation-underline-thin fw-lighter">Grooming</a></li>
+                                <li class="py-1"><a href="veterinarySV.html" class="animation-underline-thin fw-lighter">Veterinary services</a></li>
+                                <li class="py-1"><a href="petsHotel.html" class="animation-underline-thin fw-lighter">Pets hotel</a></li>
+                                <li class="py-1"><a href="shippingReturns.html" class="animation-underline-thin fw-lighter">Shipping & returns</a></li>
+                                <li class="py-1"><a href="help.html" class="animation-underline-thin fw-lighter">Help</a></li>
+                                <li class="py-1"><a href="privacyPolicy.html" class="animation-underline-thin fw-lighter">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="border-bottom: solid 1px var(--color-border);">
+                    <a class="d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#THEME">
+                        <h6 class="">THEME</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <div class="collapse" id="THEME">
+                        <div class="card card-body bg-transparent ps-0" style="border: none;">
+                            <ul class="p-0 m-0" style="list-style: none;">
+                                <li class="py-1"><p class="animation-underline-thin fw-lighter" style="cursor: pointer;">Vertical</p></li>
+                                <li class="py-1"><p class="animation-underline-thin fw-lighter" style="cursor: pointer;">Tiles</p></li>
+                                <li class="py-1"><p class="animation-underline-thin fw-lighter" style="cursor: pointer;">Classic</p></li>
+                                <li class="py-1"><p class="animation-underline-thin fw-lighter" style="cursor: pointer;">Fashion</p></li>
+                                <li class="py-1"><p class="animation-underline-thin fw-lighter" style="cursor: pointer;">Electronics</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="border-bottom: solid 1px var(--color-border);">
+                    <a class="d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#NEEDASSISTANCE">
+                        <h6 class="">NEED ASSISTANCE?</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <div class="collapse" id="NEEDASSISTANCE">
+                        <div class="card card-body bg-transparent ps-0" style="border: none;">
+                            <h5 class="my-4">📞 Tel: +1 123 456 7890</h5>
+                            <p class="mb-4 fw-light">7895 Piermont Dr NE Albuquerque,
+                                NM 198866, USA</p>
+                            <p class=" fw-light">Our hours of operation are
+                                Monday-Thursday: 10 AM-7 PM EST,
+                                Friday: 10 AM-6 PM EST,
+                                Saturday-Sunday: 1 PM-6 PM EST.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="border-bottom: solid 1px var(--color-border);">
+                    <a class="d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#NEWSLETTER">
+                        <h6 class="">NEWSLETTER SIGNUP</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <div class="collapse" id="NEWSLETTER">
+                        <div class="card card-body bg-transparent ps-0" style="border: none;">
+                            <p class="fw-light" style="font-size: .8rem;">Sign up for our e-mail and be the first who know our special offers!</p>
+                        <div class="d-flex align-items-center px-3 my-3" style="background: var(--color-bg-form); border-radius: 5px;">
+                            <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0859 4H3.91545L10.0007 8.73294L16.0859 4ZM2 5.04393V16H18V5.04495L10.0007 11.2667L2 5.04393ZM0 18V2H20V18H0Z" fill="#142C73"></path>
+                            </svg>
+                            <div class="form-floating w-100">
+                                <input type="email" style="border: none;" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Enter your email</label>
+                            </div>
+                        </div>
+                        <p class="fw-light" style="font-size: .8rem;">By clicking the button you agree to the <a href="#" style="border-bottom: solid 1px;">Privacy Policy</a> and <a href="#" style="border-bottom: solid 1px;">Terms and Conditions.</a> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="border-bottom: solid 1px var(--color-border);">
+                    <a class="d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#FOLLOW">
+                        <h6 class="">FOLLOW US:</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <div class="collapse" id="FOLLOW">
+                        <div class="card card-body bg-transparent ps-0" style="border: none;">
+                            <ul class="d-flex justify-content-between p-0 m-0 w-100" style="list-style: none; width: max-content; flex-flow:row wrap; ">
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.23064 3.05389L13.8614 16.9461H15.9657L6.33488 3.05389H4.23064Z" fill="#142C73"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0H0V20H20V0ZM17.411 2H16.0368L10.9375 7.8125L6.90798 2H2.19632L8.3056 10.8125L2 18H3.37423L8.91219 11.6875L13.2883 18H18L11.5441 8.6875L17.411 2Z" fill="#142C73"></path>
+                                    </svg>
+                                </li>
+
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.79297 20V11.3333H5V7.33333H7.79297V4.54167C7.79297 3.77778 7.89714 3.11111 8.10547 2.54167C8.32682 1.97222 8.6263 1.5 9.00391 1.125C9.39453 0.75 9.85677 0.472222 10.3906 0.291667C10.9245 0.0972222 11.5104 0 12.1484 0C12.7474 0 13.2878 0.0208333 13.7695 0.0625C14.2513 0.0902778 14.5638 0.118056 14.707 0.145833V3.3125H12.9492C12.2591 3.3125 11.8034 3.47222 11.582 3.79167C11.3607 4.11111 11.25 4.52778 11.25 5.04167V7.33333H15L13.75 11.3333H11.25V20H7.79297Z" fill="#142C73"></path>
+                                    </svg>
+                                </li>
+
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.8349 0C5.21263 0 2.22266 3.51266 2.22266 7.34283C2.22266 9.11916 3.24068 11.3343 4.8703 12.0368C5.11775 12.1455 5.25238 12.0993 5.30751 11.8755C5.35623 11.7055 5.57035 10.8867 5.6742 10.5005C5.70626 10.3767 5.68959 10.2692 5.58702 10.153C5.04595 9.54293 4.61643 8.43163 4.61643 7.38908C4.61643 4.71771 6.7948 2.12385 10.5015 2.12385C13.7069 2.12385 15.9494 4.15394 15.9494 7.05782C15.9494 10.3392 14.1684 12.6093 11.8542 12.6093C10.5733 12.6093 9.61938 11.6293 9.92197 10.4167C10.2874 8.97291 11.0041 7.42034 11.0041 6.37904C11.0041 5.44525 10.463 4.67271 9.35782 4.67271C8.05387 4.67271 6.9961 5.93152 6.9961 7.6216C6.9961 8.69539 7.38587 9.42043 7.38587 9.42043C7.38587 9.42043 6.09603 14.5007 5.85627 15.4494C5.45111 17.0558 5.9114 19.6571 5.95115 19.8809C5.97551 20.0047 6.11783 20.0434 6.19732 19.9422C6.32425 19.7796 7.88335 17.6108 8.32056 16.0432C8.47955 15.472 9.13216 13.1556 9.13216 13.1556C9.56168 13.9119 10.8015 14.5457 12.1221 14.5457C16.0506 14.5457 18.8893 11.1793 18.8893 7.00157C18.8752 2.99639 15.3596 0 10.8349 0Z" fill="#142C73"></path>
+                                        </svg>
+                                </li>
+
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.0661 9.99984C14.0661 12.2454 12.2458 14.0658 10.0002 14.0658C7.75457 14.0658 5.93423 12.2454 5.93423 9.99984C5.93423 7.75424 7.75457 5.93391 10.0002 5.93391C12.2458 5.93391 14.0661 7.75424 14.0661 9.99984Z" fill="#142C73"></path>
+                                        <path d="M19.5089 2.80602C19.3135 2.27639 19.0017 1.797 18.5965 1.4035C18.203 0.998331 17.7239 0.686514 17.194 0.491062C16.7642 0.324133 16.1185 0.12544 14.9293 0.0713093C13.6428 0.0126412 13.2571 0 10.0002 0C6.74295 0 6.35723 0.0123171 5.07107 0.0709852C3.88182 0.12544 3.23582 0.324133 2.80635 0.491062C2.27639 0.686514 1.797 0.998331 1.40382 1.4035C0.998655 1.797 0.686839 2.27606 0.491062 2.80602C0.324133 3.23582 0.12544 3.88182 0.0713093 5.07107C0.0126412 6.35723 0 6.74295 0 10.0002C0 13.2571 0.0126412 13.6428 0.0713093 14.9293C0.12544 16.1185 0.324133 16.7642 0.491062 17.194C0.686839 17.7239 0.998331 18.203 1.4035 18.5965C1.797 19.0017 2.27606 19.3135 2.80602 19.5089C3.23582 19.6762 3.88182 19.8749 5.07107 19.929C6.35723 19.9877 6.74262 20 9.99984 20C13.2574 20 13.6431 19.9877 14.9289 19.929C16.1182 19.8749 16.7642 19.6762 17.194 19.5089C18.2578 19.0986 19.0986 18.2578 19.5089 17.194C19.6759 16.7642 19.8746 16.1185 19.929 14.9293C19.9877 13.6428 20 13.2571 20 10.0002C20 6.74295 19.9877 6.35723 19.929 5.07107C19.8749 3.88182 19.6762 3.23582 19.5089 2.80602ZM10.0002 16.2634C6.54069 16.2634 3.73629 13.4593 3.73629 9.99984C3.73629 6.54036 6.54069 3.73629 10.0002 3.73629C13.4593 3.73629 16.2637 6.54036 16.2637 9.99984C16.2637 13.4593 13.4593 16.2634 10.0002 16.2634ZM16.5114 4.95243C15.703 4.95243 15.0476 4.29704 15.0476 3.48865C15.0476 2.68026 15.703 2.02486 16.5114 2.02486C17.3197 2.02486 17.9751 2.68026 17.9751 3.48865C17.9748 4.29704 17.3197 4.95243 16.5114 4.95243Z" fill="#142C73"></path>
+                                    </svg>
+                                    
+                                </li>
+
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.8776 5.00773C17.721 5.00773 16.6539 4.62902 15.7969 3.99014C14.8141 3.25776 14.108 2.18345 13.8586 0.945208C13.7969 0.639268 13.7636 0.323546 13.7605 0H10.4565L10.4526 13.8108C10.4526 15.1175 9.59168 16.2254 8.39829 16.6151C8.05194 16.7282 7.67789 16.7818 7.28841 16.7606C6.79126 16.7336 6.32538 16.5854 5.92045 16.3459C5.05876 15.8365 4.47453 14.9125 4.45869 13.8554C4.43376 12.2032 5.78508 10.8562 7.45544 10.8562C7.78516 10.8562 8.10182 10.9094 8.39829 11.006V7.69038C8.08559 7.64461 7.76735 7.62074 7.44555 7.62074C5.61726 7.62074 3.90732 8.3719 2.68503 9.72516C1.76118 10.7478 1.20704 12.0526 1.12154 13.4207C1.00952 15.218 1.67489 16.9265 2.96527 18.187C3.15486 18.3721 3.35396 18.5438 3.56216 18.7023C4.66848 19.5438 6.02099 20 7.44555 20C7.76735 20 8.08559 19.9765 8.39829 19.9308C9.72903 19.7359 10.9569 19.1338 11.9258 18.187C13.1165 17.0239 13.7743 15.4797 13.7814 13.8362L13.7644 6.53743C14.3324 6.97052 14.9535 7.32889 15.62 7.60705C16.6567 8.03936 17.7559 8.25845 18.8871 8.25805V5.00694C18.8879 5.00773 18.8784 5.00773 18.8776 5.00773Z" fill="#142C73"></path>
+                                    </svg>
+                                </li>
+
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_293_3929)">
+                                        <path d="M11.2488 8.74375V13.3238C11.2488 14.4788 11.2362 15.1538 11.3562 15.4838C11.4762 15.8075 11.7787 16.1475 12.1225 16.3475C12.5525 16.61 13.0725 16.74 13.6275 16.74C14.6412 16.74 15.2475 16.61 16.2525 15.9537V18.96C15.3925 19.3612 14.6437 19.5987 13.955 19.755C13.2675 19.9237 12.5163 20 11.7125 20C10.7963 20 10.2512 19.8875 9.55875 19.6588C8.8475 19.4263 8.2525 19.0962 7.755 18.6663C7.24875 18.2412 6.9175 17.7875 6.72375 17.305C6.52625 16.8263 6.43375 16.125 6.43375 15.2063V8.1975H3.75V5.36375C4.54 5.105 5.415 4.74125 5.98 4.265C6.52625 3.78375 6.98875 3.215 7.3175 2.5425C7.66125 1.8825 7.895 1.02875 8.025 0H11.2488V5.00125H16.2525V8.74375H11.2488Z" fill="#142C73"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_293_3929">
+                                        <rect width="20" height="20" fill="white"></rect>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                </li>
+
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_293_3945)">
+                                        <path d="M19.6079 15.2163C16.9341 14.773 15.729 12.014 15.6803 11.8969C15.6765 11.8893 15.674 11.8818 15.669 11.8742C15.5328 11.5947 15.5003 11.3642 15.5753 11.1892C15.7215 10.8441 16.2815 10.6653 16.6516 10.547C16.7591 10.513 16.8603 10.4802 16.9441 10.4475C17.3091 10.3027 17.5691 10.1453 17.7416 9.9677C17.9466 9.75488 17.9866 9.55088 17.9841 9.41866C17.9779 9.09629 17.7329 8.80918 17.3416 8.6694C17.2103 8.61525 17.0591 8.58629 16.9066 8.58629C16.8028 8.58629 16.6478 8.60014 16.5016 8.6694C16.189 8.81674 15.909 8.89733 15.6678 8.90866C15.5403 8.90237 15.4503 8.87466 15.3915 8.84822C15.399 8.72229 15.4065 8.59259 15.4153 8.45911L15.419 8.40118C15.5053 7.0374 15.6115 5.34118 15.164 4.33377C14.8577 3.6437 14.4465 3.05059 13.9402 2.56955C13.5164 2.16659 13.0239 1.83918 12.4764 1.5974C11.5251 1.17429 10.6375 1.11133 10.1925 1.11133H10.1913C10.1738 1.11133 10.1575 1.11133 10.1425 1.11133C10.0188 1.11259 9.81749 1.11511 9.79874 1.11511C9.35497 1.11511 8.46618 1.17807 7.51238 1.60118C6.96611 1.84296 6.47609 2.16911 6.05357 2.57207C5.54979 3.05311 5.13977 3.64496 4.83476 4.33251C4.38724 5.33866 4.49349 7.03488 4.5785 8.3974V8.39992C4.58725 8.54599 4.59725 8.69837 4.606 8.84696C4.541 8.87592 4.43474 8.90866 4.27848 8.90866C4.02597 8.90866 3.72596 8.82807 3.38719 8.66814C3.28719 8.62155 3.17343 8.59762 3.04843 8.59762C2.84717 8.59762 2.63341 8.65681 2.44965 8.76637C2.21714 8.90363 2.06713 9.09629 2.02588 9.31162C1.99963 9.45266 2.00088 9.73348 2.31089 10.0181C2.48215 10.1742 2.73216 10.319 3.05593 10.4475C3.14093 10.4815 3.24218 10.513 3.34844 10.547C3.71846 10.6653 4.27973 10.8441 4.42599 11.1892C4.49974 11.3642 4.46724 11.5947 4.33099 11.8742C4.32723 11.8818 4.32348 11.8893 4.32098 11.8969C4.28598 11.9775 3.96722 12.7016 3.31344 13.4659C2.94217 13.9004 2.5334 14.2643 2.09838 14.5464C1.56711 14.8914 0.99333 15.1156 0.392052 15.215C0.155791 15.2541 -0.0129674 15.4656 0.000783266 15.7061C0.00453344 15.7754 0.0207842 15.8447 0.0495355 15.9114V15.9127C0.14579 16.1381 0.36705 16.3282 0.727067 16.4957C1.16709 16.701 1.82462 16.8735 2.68341 17.0082C2.72716 17.0913 2.77216 17.2991 2.80341 17.4414C2.83592 17.5925 2.86967 17.7487 2.91842 17.9136C2.97092 18.0924 3.10593 18.3065 3.45469 18.3065C3.5872 18.3065 3.73846 18.2763 3.91472 18.2423C4.17223 18.1919 4.52474 18.1227 4.96351 18.1227C5.20728 18.1227 5.45979 18.1441 5.71355 18.1869C6.20357 18.2687 6.62609 18.5684 7.11486 18.916C7.8299 19.4247 8.63994 20.0002 9.87749 20.0002C9.91125 20.0002 9.945 19.999 9.97875 19.9964C10.0188 19.999 10.07 20.0002 10.1225 20.0002C11.3601 20.0002 12.1701 19.4247 12.8851 18.9173L12.8864 18.916C13.3752 18.5697 13.7977 18.27 14.2877 18.1881C14.5415 18.1453 14.794 18.1239 15.0377 18.1239C15.4578 18.1239 15.7903 18.1781 16.0865 18.236C16.2803 18.2738 16.4303 18.2927 16.5466 18.2927H16.5578H16.5691C16.8241 18.2927 17.0116 18.1516 17.0828 17.9061C17.1303 17.7436 17.1641 17.5925 17.1978 17.4376C17.2266 17.3041 17.2741 17.0901 17.3166 17.007C18.1754 16.871 18.8329 16.6997 19.2729 16.4944C19.6317 16.327 19.853 16.1368 19.9492 15.9127C19.978 15.8459 19.9955 15.7767 19.9992 15.7049C20.013 15.4669 19.8442 15.2541 19.6079 15.2163Z" fill="#142C73"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_293_3945">
+                                        <rect width="20" height="20" fill="white"></rect>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                </li>
+                                
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.138 3.10873C16.2169 3.17255 16.7467 3.34036 17.235 4.25273C17.7435 5.16391 18 6.73336 18 9.49764V9.50709C18 12.2584 17.7435 13.8396 17.2361 14.7414C16.7479 15.6537 16.218 15.8192 15.1391 15.896C14.0603 15.961 11.3501 16 9.00225 16C6.64987 16 3.93862 15.961 2.86087 15.8948C1.78425 15.818 1.25437 15.6525 0.761625 14.7402C0.25875 13.8385 0 12.2572 0 9.50591V9.49645C0 6.73336 0.25875 5.16391 0.761625 4.25273C1.25437 3.33918 1.78537 3.17255 2.862 3.10755C3.93862 3.03191 6.64987 3 9.00225 3C11.3501 3 14.0603 3.03191 15.138 3.10873ZM12.375 9.5L6.75 5.95455V13.0455L12.375 9.5Z" fill="#142C73"></path>
+                                        </svg>
+                                </li>
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 5.95255L0.807483 7.03578C0.807483 7.03578 2.48245 5.69034 3.03993 6.35988C3.60492 7.03578 5.74363 15.1517 6.45111 16.6524C7.0686 17.9673 8.78231 19.7022 10.6548 18.465C12.5447 17.2201 18.7833 11.7951 19.9008 5.37594C21.0158 -1.03175 12.381 0.309871 11.476 5.89527C13.7535 4.50274 14.9809 6.46553 13.8135 8.68416C12.6435 10.9117 11.5698 12.3641 11.0135 12.3641C10.4673 12.3641 10.0348 10.8697 9.3948 8.27556C8.73856 5.58851 8.73856 0.743923 5.99362 1.29381C3.39868 1.81569 0 5.95255 0 5.95255Z" fill="#142C73"></path>
+                                    </svg>
+                                </li>
+                                
+                                <li class="" style="cursor: pointer;">
+                                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9975 0H10.0025C15.5163 0 20 4.48625 20 10C20 15.5137 15.5163 20 10.0025 20C7.96875 20 6.0825 19.395 4.50125 18.3475L0.6575 19.5763L1.90375 15.8612C0.705 14.215 0 12.1875 0 10C0 4.485 4.48375 0 9.9975 0ZM13.8587 15.5325C14.6225 15.3675 15.58 14.8025 15.8212 14.1212C16.0625 13.4387 16.0625 12.8575 15.9925 12.7337C15.936 12.6356 15.8023 12.5712 15.6028 12.4751C15.5508 12.4501 15.4944 12.423 15.4337 12.3925C15.14 12.2462 13.7112 11.54 13.4412 11.4462C13.1762 11.3462 12.9237 11.3812 12.7237 11.6637C12.6857 11.717 12.6477 11.7704 12.61 11.8235C12.3687 12.1628 12.136 12.4901 11.9425 12.6987C11.7662 12.8862 11.4787 12.91 11.2375 12.81C11.2112 12.799 11.181 12.7869 11.1473 12.7732C10.7653 12.6189 9.91805 12.2768 8.89249 11.3637C8.02749 10.5937 7.43999 9.635 7.26999 9.3475C7.10308 9.05909 7.24705 8.88997 7.38011 8.73367C7.38257 8.73077 7.38503 8.72788 7.38749 8.725C7.47328 8.61885 7.55653 8.53047 7.64019 8.44164C7.70038 8.37774 7.76078 8.31362 7.82249 8.2425C7.83165 8.23193 7.84057 8.22168 7.84925 8.2117C7.98028 8.06104 8.05831 7.97132 8.14624 7.78375C8.24624 7.59 8.17499 7.39 8.10374 7.2425C8.05472 7.1392 7.7519 6.40448 7.49194 5.77375C7.38069 5.50382 7.27729 5.25294 7.20499 5.07875C7.01124 4.615 6.86374 4.5975 6.56999 4.585C6.56099 4.58455 6.55189 4.58409 6.54271 4.58362C6.44986 4.57892 6.3476 4.57375 6.23499 4.57375C5.85249 4.57375 5.45374 4.68625 5.21249 4.9325C5.20406 4.94111 5.19527 4.95004 5.18615 4.95932C4.87751 5.27321 4.18999 5.97243 4.18999 7.36625C4.18999 8.76276 5.18087 10.1143 5.36421 10.3644C5.36926 10.3712 5.3737 10.3773 5.37749 10.3825C5.38852 10.397 5.40931 10.4271 5.43957 10.4709C5.81392 11.013 7.63728 13.6536 10.3562 14.78C12.6537 15.7325 13.3362 15.6437 13.8587 15.5325Z" fill="#142C73"></path>
+                                        </svg>
+                                </li>
+                               
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="dropdown">
+                <div class="py-2" style="background: var(--color-light-white); border-radius: 5px;">
+                    <p class="mx-3" style="font-size: .8rem;">Contry/region</p>
+                    <a class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        United States (USD $)
+                    </a>
+                    <ul class="dropdown-menu w-100 mb-4" aria-labelledby="dropdownMenuLink" style="border: none; box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.174);">
+                        <li><a class="dropdown-item" href="#">Vietnam (USD $)</a></li>
+                        <li><a class="dropdown-item" href="#">Japan (USD $)</a></li>
+                        <li><a class="dropdown-item" href="#">United States (USD $)</a></li>
+                    </ul>
+                </div>
+              
+                
+            </div>
+ 
+            <ul class="d-flex my-3 justify-content-between p-0 m-0" style="list-style: none;">
+                <li class="mx-2">
+                <svg class="icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-visa"><title id="pi-visa">Visa</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path></svg>
+              </li><li class="mx-2">
+                <svg class="icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#F79E1B" cx="23" cy="12" r="7"></circle><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg>
+              </li><li class="mx-2">
+                <svg class="icon--full-color" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-american_express"><title id="pi-american_express">American Express</title><g fill="none"><path fill="#000" d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z" opacity=".07"></path><path fill="#006FCF" d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"></path><path fill="#FFF" d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"></path></g></svg>
+  
+              </li><li class="mx-2">
+                <svg class="icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+              </li><li class="mx-2">
+                <svg class="icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-diners_club"><title id="pi-diners_club">Diners Club</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z" fill="#3086C8"></path></svg>
+              </li><li class="mx-2">
+                <svg class="icon--full-color" viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-discover" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="pi-discover">Discover</title><path fill="#000" opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z" fill="#fff"></path><path d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z" fill="#231F20"></path><path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z" fill="url(#pi-paint0_linear)"></path><path opacity=".65" d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z" fill="url(#pi-paint1_linear)"></path><path d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z" fill="#231F20"></path><path d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z" fill="#231F20"></path><path d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z" fill="#F48120"></path><defs><linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632" y2="9.104" gradientUnits="userSpaceOnUse"><stop stop-color="#F89F20"></stop><stop offset=".25" stop-color="#F79A20"></stop><stop offset=".533" stop-color="#F68D20"></stop><stop offset=".62" stop-color="#F58720"></stop><stop offset=".723" stop-color="#F48120"></stop><stop offset="1" stop-color="#F37521"></stop></linearGradient><linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378" y2="6.446" gradientUnits="userSpaceOnUse"><stop stop-color="#F58720"></stop><stop offset=".359" stop-color="#E16F27"></stop><stop offset=".703" stop-color="#D4602C"></stop><stop offset=".982" stop-color="#D05B2E"></stop></linearGradient></defs></svg>
+            </li>
+        </ul>
+
+        </div>
+        
+    </footer>
+    
+    <script src="../../assets_global/bootstrap5/bootstrap.bundle.min.js"></script>
+    <script src="../../assets_global/animation/animation.js"></script>
+    <script src="assets/js/global.js"></script>
+
+    
+</body>
+</html>

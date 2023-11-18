@@ -1,0 +1,135 @@
+:root {
+  --bg--overplay: #b7bed49b;
+  --color-base: #142c73;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-yellow: #ffd701;
+  --color-bg-form: #f6f7fa;
+  --color-light-white: #f6f7fa; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--color-base); }
+
+*:focus {
+  box-shadow: none !important;
+  outline: none; }
+
+a {
+  text-decoration: none;
+  color: var(--color-base); }
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-base); }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.section__pd {
+  padding: 4rem 0; }
+
+.header .sidebar {
+  cursor: pointer !important; }
+  .header .sidebar .sidebar-hover:hover {
+    border-radius: 5px !important;
+    background: var(--color-yellow) !important; }
+
+.header .menu__bottom .search__input:hover {
+  cursor: pointer !important;
+  background: var(--color-white) !important; }
+
+.main .bannerRun:hover {
+  cursor: pointer;
+  animation-play-state: paused !important; }
+
+.main .zoom-hover:hover .favorites__btn {
+  background: var(--color-base) !important; }
+  .main .zoom-hover:hover .favorites__btn .favorites__icon {
+    color: var(--color-white) !important; }
+
+.main .section__pets .active__tabMenu {
+  border-bottom: solid 2px var(--color-base);
+  opacity: 1 !important; }
+
+.main .section__pets .active {
+  opacity: 1 !important; }
+
+.main .section__productReviews .productReviews__content:hover .productReviews__img {
+  transform: scale(1.1);
+  animation: zoomHover 1.5s ease; }
+
+.main .section__productDetail .active {
+  background: var(--color-base);
+  color: var(--color-white); }
+
+.main .section__productDetail .active__color {
+  border: solid 2px var(--color-base); }
+
+.animation-underline {
+  position: relative;
+  width: max-content; }
+
+.animation-underline::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-base) !important;
+  transition: all 0.5s ease; }
+
+.animation-underline:hover::after {
+  width: 100% !important; }
+
+.animation-underline-thin {
+  position: relative;
+  width: max-content; }
+
+.animation-underline-thin::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-base) !important;
+  transition: all 0.5s ease; }
+
+.animation-underline-thin:hover::after {
+  width: 100% !important; }
+
+.animation-underline-thin-light {
+  position: relative;
+  width: max-content; }
+
+.animation-underline-thin-light::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-white) !important;
+  transition: all 0.5s ease; }
+
+.animation-underline-thin-light:hover::after {
+  width: 100% !important; }

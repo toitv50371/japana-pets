@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  href="../../assets_global/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link  href="../../assets_global/animation/animation.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/stylescss.css">
+</head>
+<body>
+    <header class="header">
+        <div id="menu__sticky" class="bg-white w-100" style="padding: .5rem 0; z-index: 99;
+        width: 100%;transition: top 0.3s; border-bottom: solid 1px rgba(128, 128, 128, 0.271);">
+            <div class="" style="background: var(--color-white);">
+                <nav id="navbar" class="navbar navbar-light bg-gradient position-relative py-0 " style="z-index: 1;">
+                    <div class="container-fluid p-0">
+                        <!-- menu -->
+                        <div class="container">
+                            <div class="row my-3 d-flex align-items-center" >
+                                <div class="col-md-3 col-lg-3" >
+                                    <ul class="d-flex justify-content-between p-0 m-0 align-items-center" style="list-style: none;">
+                                        <li><a href="aboutUs.html" style="color: var(--color-base);" class="animation-underline-thin">About us</a></li>
+                                        <li><a href="locations.html" style="color: var(--color-base);" class="animation-underline-thin">Locations</a></li>
+                                        <li><a href="ShippingReturns.html" style="color: var(--color-base);" class="animation-underline-thin">Shipping & returns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 col-lg-6 d-flex justify-content-center">
+                                    <a href="index.html" class="zoom-hover">
+                                        <img src="../img/logo.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-lg-3 d-flex justify-content-end align-items-center">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center"  style="cursor: pointer;">
+                                            <img src="../img/phone.svg" alt="" style="width: 20px; height: 20px;">
+                                            <span class="fs-5 ms-2">+84 123456789</span>
+                                        </div>
+                                        <div class="d-flex align-items-center"  style="cursor: pointer;">
+                                            <a href="login.html" class="">
+                                                <img src="../img/user.svg" alt="" style="width: 20px; height: 20px;">
+                                            </a>
+                                            <div class="mx-3" style="margin-top: 5px; width: 1px; height: 1.5rem; background: rgba(128, 128, 128, 0.374)"></div>
+                                            <div class="cart__toggle" style="cursor: pointer;">
+                                                <img src="../img/cart.svg" alt="" style="width: 20px; height: 20px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <!-- Cart -->
+                    <div class="cart__modal position-fixed top-0 start-0 bottom-0 end-0 w-100 h-100 d-none">
+                        <div class="bg__overlay position-absolute w-100" style="height: 100vh; background:  var(--bg--overplay); z-index: 3;"></div>
+                        <div class="header__cart position-absolute top-0 end-0" style="width: 35%;;z-index: 4; height: 100vh; background: var(--color-white);">
+                            <div class="d-flex justify-content-end p-4" style=" border-top: solid 1px rgba(128, 128, 128, 0.277);">
+                                <i class="fa-solid fa-xmark fs-5 cart__icon-close" style="cursor: pointer;"></i>
+                            </div>
+                            <div class="p-4 text-center">
+                                <a href="#" class="text-opacity"><svg class="theme-icon" width="42" height="42" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70718 2.70718L5.41424 6.00012H14.5858L11.2928 2.70718L12.707 1.29297L17.4142 6.00012H20L18 18.0001H2L0 6.00012H2.58582L7.29297 1.29297L8.70718 2.70718ZM2.36092 8.00012L3.69425 16.0001H16.3057L17.6391 8.00012H2.36092Z" fill="#142C73"></path>
+                                </svg></a>
+                                <h4 class="my-4">Your cart is empty</h4>
+                                <button class="btn btn-dark px-5 py-2 fw-bold" style="background: var(--color-yellow); border: none; color: var(--color-black);" >Continue shopping</button>
+                                <h4 class="my-4">Have an account?</h4>
+                                <p class="text-opacity"><a href="login" class="fw-bold" style="border-bottom: solid 1px;">Log in</a> to check out faster.</p>
+                            </div>
+                            <div class="mx-5 my-5" style="border-top: solid 1px rgba(128, 128, 128, 0.277);">
+                                <div class="container">
+                                    <h6 class="my-4">TOP PRODUCTS OF THIS WEEK</h6>
+                                    <div class="row">
+                                        <div class="col-md-3 col-lg-3">
+                                            <img src="../img/cart__1.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                            <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                            <p style="font-size: .9rem;">Tropical flakes</p>
+                                            <p class="fw-bold" style="font-size: .9rem;">From $10.99 USD</p>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3">
+                                            <img src="../img/cart__2.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                            <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                            <p style="font-size: .9rem;">Live centipede</p>
+                                            <p class="fw-bold" style="font-size: .9rem;">From $10.99 USD</p>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3">
+                                            <img src="../img/cart__3.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                            <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                            <p style="font-size: .9rem;">Live crickets - large</p>
+                                            <p class="fw-bold" style="font-size: .9rem;">From $7.25 USD</p>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3">
+                                            <img src="../img/cart__4.webp" alt="" style="border-radius: 5px; overflow: hidden;">
+                                            <p style="font-size: .9rem; text-transform: uppercase;">Pure</p>
+                                            <p style="font-size: .9rem;">Waterproof dog suit</p>
+                                            <p class="fw-bold" style="font-size: .9rem;">From $10.99 USD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- menu bottom -->
+            <div class="container menu__bottom mt-4">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 position-relative">
+                        <div class="sidebar" style="border-radius: 10px; overflow: hidden; box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.148);">
+                            <div class="d-flex align-items-center p-3 text-light" style="background: var(--color-base);">
+                                <svg class="text-light" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="6" width="20" height="2" fill="white"></rect>
+                                    <rect y="12" width="20" height="2" fill="white"></rect>
+                                </svg>
+                                <h6 class="ms-2 text-light">SHOP BY</h6>
+                            </div>
+                            <div class="sidebar__submenu position-absolute start-0 w-100 d-none" style="z-index: 2;">
+                                <div class="p-2" style=" background: var(--color-white);margin: 0 15px ;transition: top .3s ease; box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.148); border-radius: 5px;" >
+                                    <div class="menu__lv2 p-2 m-2 sidebar-hover position-relative">
+                                        <a href="dog.html" class=" d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 8H9V10H7V8Z" fill="#142C73"></path>
+                                                    <path d="M13 8H11V10H13V8Z" fill="#142C73"></path>
+                                                    <path d="M11 14H9V16H11V14Z" fill="#142C73"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.917 15C15.441 17.8377 12.973 20 10 20C7.027 20 4.55904 17.8377 4.08296 15H0V9C0 4.02944 4.02944 0 9 0H11C15.9706 0 20 4.02944 20 9V15H15.917ZM16 13V7H14V14C14 16.2091 12.2091 18 10 18C7.79086 18 6 16.2091 6 14V7H4L4 13H2V9C2 5.13401 5.13401 2 9 2H11C14.866 2 18 5.13401 18 9V13H16Z" fill="#142C73"></path>
+                                                </svg>
+                                                <h6 class="ms-2">Dog</h6>
+                                            </div>
+                                            <i class="fa-solid fa-angle-right" style="font-size: .8rem;"></i>
+                                            <div class="menu__lv2-content position-absolute top-0 start-100 start bg-white d-none" style="width: max-content; z-index: 2; box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.278); border-radius: 5px; overflow: hidden;">
+                                                <div class="container py-4" style="width: 100%; ">
+                                                    <ul class="d-flex p-0" style="list-style: none; ">
+                                                        <li class="me-3">
+                                                            <a href="dogFood.html">
+                                                                <h6 class="mb-4 animation-underline-thin">DOG FOOD</h6>
+                                                            </a>
+                                                            <ul class="p-0" style="list-style: none;">
+                                                                <li class="my-2 animation-underline-thin"><a href="dryFood.html">Dry food</a></li>
+                                                                <li class="my-2 animation-underline-thin"><a href="productDetail.html">Wet food</a></li>
+                                                                <li class="my-2 animation-underline-thin"><a href="veterinaryDiets.html">Veterinary diets</a></li>
+                                                                <li class="my-2 animation-underline-thin"><a href="productDetail.html">Puppy food</a></li>
+                                                                <li class="my-2 animation-underline-thin"><a href="BDF.html">Best dog food</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="mx-3">
+                                                            <a href="dogSupplies.html"><h6 class="mb-4 animation-underline-thin text-uppercase">Dog supplies</h6></a>
+                                                                <ul class="p-0" style="list-style: none;">
+                                                                    <li class="my-2 animation-underline-thin px-0"><a href="CAA.html">Clothes and accessories</a></li>
+                                                                    <li class="my-2 animation-underline-thin"><a href="beds.html">Beds</a></li>
+                                                                    <li class="my-2 animation-underline-thin"><a href="beds.html">Collars and leashes</a></li>
+                                                                    <li class="my-2 animation-underline-thin"><a href="beds.html">Crates and kennels</a></li>
+                                                                    <li class="my-2 animation-underline-thin"><a href="toys.html">Toys</a></li>
+                                                                </ul>
+                                                        </li>
+                                                        <li class="mx-3">
+                                                            <a href="healthWellness.html">
+                                                                <h6 class="mb-4 animation-underline-thin text-uppercase">Health & wellness</h6>
+                                                            </a>
+                                                            <ul class="p-0" style="list-style: none;">
+                                                                <li class="my-2 animation-underline-thin px-0"><a href="vitamins.html">Vitamins</a></li>
+                                                                <li class="my-2 animation-underline-thin"><a href="supplements.html">Supplements</a></li>
+                                                            </ul>
+                                                            
+                                                        </li>
+                                                        <li class="mx-3">
+                                                            <a href="brands.html">
+                                                                <h6 class="mb-4 animation-underline-thin text-uppercase">Shop by brand</h6>
+                                                            </a>
+                                                            <ul class="p-0" style="list-style: none;">
+                                                                <li class="my-2 animation-underline-thin px-0"><a href="petsy.html">Petsy</a></li>
+                                                                <li class="my-2 animation-underline-thin px-0"><a href="petify.html">Petify</a></li>
+                                                                <li class="my-2 animation-underline-thin px-0"><a href="pure.html">Pure</a></li>
+                                                            </ul>
+                                                            
+                                                        </li>
+                                                        <li class="mx-3">
+                                                            <div class="" style="width: 200px;">
+                                                                    <img src="../img/menu-sidebar__lv2.webp" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+                                                                <div class="my-2">
+                                                                    <h5 class="">Free shipping</h5>
+                                                                    <p style="font-size: .9rem;">No code needed, just head for checkout!</p>
+                                                                </div>
+                                                                <button class="btn btn-dark py-3 px-4 zoom-hover my-3" style="border: none; background: var(--color-yellow); color: var(--color-black);"><h6>Shop now</h6></button>     
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>                      
+                                                
+                                            </div>
+    
+                                        </a>
+                                    </div>
+                                    <a href="cat.html" class="d-flex align-items-center p-2 m-2  sidebar-hover bg-transparent">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 9H9V11H7V9Z" fill="#142C73"></path>
+                                            <path d="M11 9H13V11H11V9Z" fill="#142C73"></path>
+                                            <path d="M9 13H11V15H9V13Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L6.09091 4H13.9091L20 0V11C20 13.3869 18.9464 15.6761 17.0711 17.364C15.1957 19.0518 12.6522 20 10 20C7.34784 20 4.8043 19.0518 2.92893 17.364C1.05357 15.6761 0 13.3869 0 11V0ZM14.5071 6L18 3.70615V11C18 12.7844 17.2142 14.5444 15.7331 15.8774C14.2451 17.2166 12.1858 18 10 18C7.81423 18 5.7549 17.2166 4.26686 15.8774C2.78577 14.5444 2 12.7844 2 11V3.70615L5.4929 6H14.5071Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Cat</h6>
+                                    </a>
+                                    <a href="fish.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9H4V11H6V9Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 3C11.7007 3 14.5031 4.84639 16.0479 7.609C16.9907 6.14058 18.3747 5.01132 20 4.43164V6.60876C18.681 7.28634 17.6226 8.48781 17.0901 10C17.6226 11.5123 18.681 12.7137 20 13.3913V15.5684C18.3747 14.9887 16.9907 13.8595 16.0479 12.391C14.503 15.1536 11.7007 17 8.5 17C4.44475 17 1.02893 14.0361 0 10C1.02893 5.96394 4.44475 3 8.5 3ZM2.08063 10C3.04965 12.998 5.63205 15 8.5 15C11.3679 15 13.9504 12.998 14.9194 10C13.9503 7.00202 11.3679 5 8.5 5C5.63205 5 3.04965 7.00202 2.08063 10Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Fish</h6>
+                                    </a>
+                                    <a href="smallPet.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 11V9H7V11H9Z" fill="#142C73"></path>
+                                            <path d="M13 9H11V11H13V9Z" fill="#142C73"></path>
+                                            <path d="M11 15V13H9V15H11Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0111 4.11112C10.8102 2.26286 12.6817 1 14.8 1C17.6184 1 20 3.23559 20 6.11111C20 7.97785 18.9949 9.57604 17.5191 10.4669C17.5724 10.8225 17.6 11.1861 17.6 11.5556C17.6 15.7197 14.1439 19 10 19C5.85612 19 2.4 15.7197 2.4 11.5556C2.4 11.1861 2.42762 10.8225 2.48095 10.4669C1.0051 9.57604 0 7.97785 0 6.11111C0 3.23559 2.3816 1 5.2 1C7.31828 1 9.18982 2.26286 9.98892 4.11112L10 4.11111L10.0111 4.11112ZM11.602 6C11.6232 5.41265 11.8119 4.86672 12.123 4.40595C12.6948 3.55916 13.6802 3 14.8 3C16.5673 3 18 4.39289 18 6.11111C18 7.04382 17.5778 7.88067 16.9091 8.45089C16.4061 8.87983 15.7636 9.1579 15.0563 9.21239C15.3501 9.81067 15.5349 10.4693 15.5857 11.1639C15.5952 11.2933 15.6 11.4239 15.6 11.5556C15.6 14.5624 13.0928 17 10 17C6.90721 17 4.4 14.5624 4.4 11.5556C4.4 11.4239 4.40481 11.2933 4.41427 11.1639C4.46506 10.4693 4.64987 9.81067 4.94372 9.21239C4.23645 9.1579 3.59391 8.87984 3.09087 8.45089C2.42217 7.88067 2 7.04382 2 6.11111C2 4.39289 3.43269 3 5.2 3C6.31975 3 7.30518 3.55916 7.87698 4.40595C8.18812 4.86672 8.37679 5.41265 8.398 6H11.602Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Small pet</span> <span class="bg-danger text-light ms-2" style="border-radius: 5px; font-size: .7rem; padding: .1rem .4rem ;">sale</span> </h6>
+                                    </a>
+                                    <a href="reptile.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9002 5.43916C10.8258 5.54695 10.7341 5.63936 10.6292 5.71029C10.6844 5.85177 10.7685 5.9791 10.8745 6.08524C11.076 6.28716 11.3565 6.41238 11.6667 6.41238H12.2222C12.3655 6.41238 12.5063 6.42307 12.6437 6.44368C13.9778 6.64378 15 7.77895 15 9.14936C15 10.661 13.7563 11.8864 12.2222 11.8864H7.77778C7.16413 11.8864 6.66667 12.3765 6.66667 12.9812L6.66667 15.1707L5 16.2655V12.9812C5 11.4696 6.24365 10.2442 7.77778 10.2442H12.2222C12.8359 10.2442 13.3333 9.754 13.3333 9.14936C13.3333 8.54473 12.8359 8.05457 12.2222 8.05457H11.6667C10.4965 8.05457 9.49525 7.34158 9.0861 6.33243C9.01422 6.15513 8.96061 5.96869 8.92757 5.77536C8.59113 5.6109 8.3587 5.23902 8.33528 4.8194C8.32828 4.69393 8.33997 4.56419 8.37315 4.43444L8.78146 2.83787C9.05585 1.76497 10.3886 1.76497 10.663 2.83787L11.0713 4.43444C11.1652 4.80159 11.087 5.16874 10.9002 5.43916ZM7.17433 6.94569C6.4424 6.14894 6.16485 4.98895 6.4375 3.92285L6.84581 2.32627C7.20536 0.920394 8.38288 0 9.72222 0C11.0616 1.21188e-07 12.2391 0.920394 12.5986 2.32627L13.0069 3.92284C13.0524 4.10067 13.0827 4.28038 13.0982 4.46008C15.2802 4.86721 17 6.76669 17 9.14936C17 11.8433 14.8015 13.9195 12.2222 13.9195H8.66667L8.66667 16.2777L3 20V12.9812C3 10.2872 5.19846 8.21097 7.77778 8.21097H7.86676C7.57662 7.8319 7.34144 7.4066 7.17433 6.94569Z" fill="#142C73"></path>
+                                        
+                                        </svg>
+                                        <h6 class="ms-2">Reptile</h6>
+                                        
+                                    </a>
+                                    <a href="bird.html" class="d-flex align-items-center p-2 m-2 sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 6V4H13V6H15Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16H8.04686L9.79686 18H8V20H15V18H12.4544L10.7044 16H11C11.9193 16 12.8295 15.8189 13.6788 15.4672C14.5281 15.1154 15.2997 14.5998 15.9497 13.9497C16.5998 13.2997 17.1154 12.5281 17.4672 11.6788C17.8189 10.8295 18 9.91925 18 9V6H20V4H18V3.5C18 1.567 16.433 0 14.5 0C14.3302 0 14.1633 0.012086 14 0.0354444C13.2459 0.143305 12.5694 0.491523 12.0505 1L12.0279 1.02234L12 1.05051V1L0 16ZM13.2788 2.60303L4.16125 14H11C11.6566 14 12.3068 13.8707 12.9134 13.6194C13.52 13.3681 14.0712 12.9998 14.5355 12.5355C14.9998 12.0712 15.3681 11.52 15.6194 10.9134C15.8707 10.3068 16 9.65661 16 9V3.5C16 2.67157 15.3284 2 14.5 2C14.0799 2 13.7031 2.1701 13.4285 2.45031L13.2788 2.60303Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2 ">Bird</h6>
+                                    </a>
+                                    <a href="brands.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15L17 20V0H3V20L10 15ZM5 16.1136L10 12.5422L15 16.1136V2H5V16.1136Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Brands</h6>
+                                    </a>
+                                    <a href="pharmacy.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3552 1.49309C19.3148 3.48387 19.3148 6.71156 17.3552 8.70234L17.2876 8.77108C18.9216 9.86501 20 11.7459 20 13.8827C20 17.2612 17.3042 20 13.9788 20C11.8756 20 10.0242 18.9044 8.94746 17.2443L8.56565 17.6322C6.60614 19.623 3.42914 19.623 1.46963 17.6322C-0.489878 15.6414 -0.489877 12.4137 1.46963 10.423L10.2592 1.49309C12.2187 -0.497695 15.3957 -0.497695 17.3552 1.49309ZM15.936 7.26049L15.2948 7.91202C14.8712 7.81609 14.4308 7.76549 13.9788 7.76549C12.6782 7.76549 11.4738 8.18449 10.4894 8.89687L8.14977 6.51991L11.6784 2.93494C12.8541 1.74047 14.7603 1.74047 15.936 2.93494C17.1117 4.1294 17.1117 6.06602 15.936 7.26049ZM6.73057 7.96176L9.07038 10.3389C8.36973 11.3388 7.95766 12.5619 7.95766 13.8827C7.95766 14.342 8.00747 14.7894 8.10189 15.2197L7.14644 16.1904C5.97074 17.3848 4.06454 17.3848 2.88883 16.1904C1.71313 14.9959 1.71313 13.0593 2.88884 11.8648L6.73057 7.96176ZM14.9824 17.8324C16.7137 17.3797 17.9929 15.783 17.9929 13.8827C17.9929 11.9825 16.7137 10.3858 14.9824 9.93305V17.8324ZM12.9753 17.8324V9.93305C11.244 10.3858 9.96472 11.9825 9.96472 13.8827C9.96472 15.783 11.244 17.3797 12.9753 17.8324Z" fill="#142C73"></path>
+                                        </svg>
+                                        <h6 class="ms-2">Pharmacy</h6>
+                                        
+                                    </a>
+                                    <div class="menu__lv2 p-2 m-2 sidebar-hover justify-content-between position-relative">
+                                        <a href="petServices.html" class=" d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 1.00043V20.0004H18V11.0004H14V9.00043H18V7.00043H14V5.00043H18V3.00043H14V1.00043H20Z" fill="#142C73"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.39043 9.99684L5.06546 13.3692C4.59441 13.1332 4.06271 13.0004 3.5 13.0004C1.567 13.0004 0 14.5674 0 16.5004C0 18.4334 1.567 20.0004 3.5 20.0004C5.433 20.0004 7 18.4334 7 16.5004C7 15.9235 6.86039 15.3791 6.61312 14.8993L7.46484 12.7315L8.31657 14.8993C8.06929 15.3791 7.92969 15.9235 7.92969 16.5004C7.92969 18.4334 9.49669 20.0004 11.4297 20.0004C13.3627 20.0004 14.9297 18.4334 14.9297 16.5004C14.9297 14.5674 13.3627 13.0004 11.4297 13.0004C10.867 13.0004 10.3353 13.1332 9.86423 13.3692L8.53926 9.99684L11.9302 1.36613L10.0687 0.634766L7.46484 7.26223L4.86095 0.634766L2.99947 1.36613L6.39043 9.99684ZM3.5 18.0004C2.67157 18.0004 2 17.3289 2 16.5004C2 15.672 2.67157 15.0004 3.5 15.0004C4.32843 15.0004 5 15.672 5 16.5004C5 17.3289 4.32843 18.0004 3.5 18.0004ZM11.4297 18.0004C12.2581 18.0004 12.9297 17.3289 12.9297 16.5004C12.9297 15.672 12.2581 15.0004 11.4297 15.0004C10.6013 15.0004 9.92969 15.672 9.92969 16.5004C9.92969 17.3289 10.6013 18.0004 11.4297 18.0004Z" fill="#142C73"></path>
+                                                </svg>
+                                                <h6 class="ms-2">Pet services</h6>
+                                            </div>
+                                            <i class="fa-solid fa-angle-right" style="font-size: .8rem;"></i>
+    
+                                            <div class="menu__lv2-content position-absolute top-0 start-100 start bg-white d-none" style="width: 200px; z-index: 2; border-radius: 5px; overflow: hidden; box-shadow: 1px 5px 5px #aaaaaa42;">
+                                                <div class="container py-2 px-4" style="width: 100%; ">
+                                                    <ul style="list-style: none; padding: 0;">
+                                                        <li class="py-1"><a href="grooming.html" class="animation-underline-thin">Grooming</a></li>
+                                                        <li class="py-1"><a href="petServices.html" class="animation-underline-thin">Veterinary services</a></li>
+                                                        <li class="py-1"><a href="petsHotel.html" class="animation-underline-thin">Pets hotel</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <a href="sale.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1892_5477)">
+                                            <path d="M13.8 6.6L7.8 14.6L6.2 13.4L12.2 5.4L13.8 6.6Z" fill="#142C73"></path>
+                                            <path d="M8 6H6V8H8V6Z" fill="#142C73"></path>
+                                            <path d="M12 12H14V14H12V12Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10ZM2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10Z" fill="#142C73"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1892_5477">
+                                            <rect width="20" height="20" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <h6 class="ms-2">Sale</h6>
+                                    </a>
+                                    <a href="new.html" class="d-flex align-items-center p-2 m-2  sidebar-hover">
+                                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1892_5494)">
+                                            <path d="M9.252 13.398L13.7258 8.68875L12.2758 7.31125L9.1496 10.602L7.67347 9.26006L6.32812 10.7399L9.252 13.398Z" fill="#142C73"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.26933 5.69829C1.85802 3.08809 4.37577 0.845426 6.94007 1.72305C8.31835 -0.574349 11.6811 -0.574349 13.0594 1.72305C15.6237 0.845427 18.1415 3.08808 17.7301 5.69829C20.2327 6.67145 20.7858 10.005 18.7838 11.7591C20.0602 14.0755 18.4477 17.0425 15.7441 17.0992C15.2385 19.7067 12.0988 20.919 9.99973 19.2199C7.90067 20.919 4.76097 19.7067 4.25534 17.0992C1.55173 17.0425 -0.0607274 14.0755 1.21571 11.7591C-0.786283 10.005 -0.233265 6.67145 2.26933 5.69829ZM8.56729 2.91729C9.14009 1.69424 10.8594 1.69424 11.4322 2.91729C11.8039 3.71092 12.7368 4.05464 13.5254 3.68853C14.7408 3.12432 16.0579 4.24302 15.7201 5.55265C15.5008 6.40244 15.9972 7.27276 16.8339 7.50547C18.1232 7.86411 18.4217 9.57807 17.3313 10.3615C16.6238 10.8698 16.4514 11.8595 16.9445 12.5821C17.7045 13.6958 16.8448 15.203 15.5121 15.0937C14.6473 15.0227 13.8868 15.6687 13.8056 16.5431C13.6806 17.8907 12.065 18.486 11.1135 17.535C10.4961 16.9179 9.50335 16.9179 8.88594 17.535C7.93445 18.486 6.31884 17.8907 6.19382 16.5431C6.1127 15.6687 5.3522 15.0227 4.48739 15.0937C3.15464 15.203 2.29499 13.6958 3.05495 12.5821C3.54807 11.8595 3.37568 10.8698 2.66813 10.3615C1.57773 9.57807 1.87628 7.86411 3.16561 7.50547C4.00225 7.27276 4.49863 6.40245 4.27941 5.55265C3.94156 4.24302 5.25862 3.12432 6.47404 3.68853C7.26271 4.05464 8.19561 3.71092 8.56729 2.91729Z" fill="#142C73"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1892_5494">
+                                            <rect width="20" height="20" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <h6 class="ms-2">New</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-lg-9">
+                        <div class="mb-3 search__input" style="background: #f6f7fa; padding: .8rem; border-radius: 10px; border: solid 1px rgba(128, 128, 128, 0.216); ">
+                            <i class="fa-solid fa-magnifying-glass mx-2"></i>
+                            <input type="text" class="bg-transparent" style="width: 90%; border: none; color: var(--color-base); " placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main" style="z-index: 0; margin-top: 11rem;">
+        <div class="path">
+            <div class="container">
+                <div class="d-flex align-items-center" style="font-size: .9rem;">
+                    <a href="index.html" class="animation-underline-thin">Home</a>
+                    <i class="fa-solid fa-angle-right mx-2" style="font-size: .8rem; opacity: .5;"></i>
+                    <p>Account</p>
+                </div>
+            </div>
+        </div>
+        <div class="section__register section__pd animate-show">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 mx-auto text-center">
+                        <h1>Create account</h1>
+                        <form action="" class="mt-5">
+                            <div class="form-floating mb-3" style="background: var(--color-bg-form); border-radius: 5px;" >
+                                <input type="text" style="border: none;" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">First name</label>
+                            </div>
+                            <div class="form-floating mb-3" style="background: var(--color-bg-form); border-radius: 5px;" >
+                                <input type="text" style="border: none;" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Last name</label>
+                            </div>
+                            <div class="form-floating w-100 mb-3" style="background: var(--color-bg-form); border-radius: 5px;" >
+                                <input type="email" style="border: none;" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                            <div class="form-floating w-100 mb-3" style="background: var(--color-bg-form); border-radius: 5px;" >
+                                <input type="password" style="border: none;" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Password</label>
+                            </div>
+
+                            <button class="btn btn-dark py-3 px-4 zoom-hover my-3" style="border: none; background: var(--color-yellow); color: var(--color-black);"><h6>Create</h6></button>
+                        
+        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+    </footer>
+
+
+    <script src="../../assets_global/bootstrap5/bootstrap.bundle.min.js"></script>
+    <script src="../../assets_global/animation/animation.js"></script>
+    <script src="assets/js/global.js"></script>
+</body>
+</html>

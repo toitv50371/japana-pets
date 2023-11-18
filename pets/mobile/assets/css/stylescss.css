@@ -1,0 +1,72 @@
+:root {
+  --bg--overplay: #b7bed49b;
+  --color-base: #142c73;
+  --color-border: #142c732d;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-yellow: #ffd701;
+  --color-bg-form: #f6f7fa;
+  --color-light-white: #f6f7fa; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--color-base); }
+
+*:focus {
+  box-shadow: none !important;
+  outline: none; }
+
+a {
+  text-decoration: none;
+  color: var(--color-base); }
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-base); }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.section__pd {
+  padding: 2rem 0; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; }
+
+.main .bannerRun:hover {
+  cursor: pointer;
+  animation-play-state: paused !important; }
+
+.main .section__pets .active__tabMenu {
+  border-bottom: solid 2px var(--color-base);
+  opacity: 1 !important; }
+
+.main .section__pets .active {
+  opacity: 1 !important; }
+
+.main .section__productDetail .active {
+  background: var(--color-base);
+  color: var(--color-white); }
+
+.main .section__productDetail .active__color {
+  border: solid 2px var(--color-base); }

@@ -1,0 +1,448 @@
+
+/* **********MOBILE********** */
+
+/* Sidebar */
+.sidebar__modal {
+    width: 100%;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+.sidebar__modal.close {
+    width: 0;
+    transition: all 0.5s ease;
+}
+.sidebar__modal.close .sidebar__menu {
+    display: none;
+}
+.sideBar__lv2 {
+    width: 0%;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.sideBar__lv2.open {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.sidebar__modal.close {
+    width: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+/* End Sidebar */
+
+/* cart */
+.sidebar__modal {
+    width: 100%;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+.sidebar__modal.close {
+    width: 0;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.sidebar__modal.close .sidebar__menu {
+    display: none;
+}
+
+.cart__modal, .filters__modal , .sideBar__lv2-filters{
+    width: 100%;
+    transition: all .5s ease;
+    opacity: 1;
+}
+.cart__modal.close, .filters__modal.close , .sideBar__lv2-filters.close{
+    width: 0%;
+    transition:  all .5s ease-out;
+    opacity: 0;
+}
+.cart__modal.close .cart__content{
+    display: none;
+}
+
+.filters__modal.close .filters__content{
+    display: none;
+}
+
+/* End cart */
+
+/* **********END MOBILE********** */
+
+
+/* **********PC********** */
+
+/* Show menu lv2 when hover */
+.menu__lv2:hover .menu__lv2-content{
+    display: block !important;
+}
+
+/* **********END PC********** */
+.img__change{
+    display: none;
+}
+.change-hover:hover .img__root{
+    display: none;
+}
+.change-hover:hover .img__change{
+    display: block;
+    transition: top 1s ease;
+}
+
+
+
+
+
+.text-opacity {
+    opacity: 0.8;
+}
+/* animation underline when hover */
+.animation-none-underline {
+    position: relative;
+    width: max-content;
+}
+.animation-none-underline::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #142c73;
+    transition: all 0.5s ease;
+}
+.animation-none-underline:hover::after {
+    width: 0% !important;
+}
+
+.animation-underline {
+    position: relative;
+    width: max-content;
+}
+.animation-underline::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #141414;
+    transition: all 0.5s ease;
+}
+.animation-underline:hover::after {
+    width: 100% !important;
+}
+
+.animation-underline-thin {
+    position: relative;
+    width: max-content;
+}
+.animation-underline-thin::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #141414;
+    transition: all 0.5s ease;
+}
+.animation-underline-thin:hover::after {
+    width: 100% !important;
+}
+.zoom-hover:hover {
+    transform: scale(1.1);
+    animation: zoomHover 1.5s ease;
+}
+
+/* Animation */
+
+.animate-scale.start {
+    animation: HideBanner 1s linear, scale1x2 0.5s ease-out 1s;
+}
+.side-to-top.start {
+    animation: HideBanner 1s linear, sideToTop 0.5s ease-out 1s;
+}
+.side-to-top-2.start {
+    animation: HideBanner 0.3s linear, sideToTop2 0.1s ease-out 0.3s;
+}
+.side-to-right-after {
+    position: relative;
+}
+.side-to-right-after.start::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #141414;
+    animation: sideToRightAfter 1s linear;
+}
+.side-to-bottom-after {
+    position: relative;
+}
+.side-to-bottom-after.start::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #141414;
+    animation: sideToBottomAfter 1s linear;
+}
+.show-hide {
+    animation: showHide 1s ease-in-out;
+}
+
+@keyframes autoscroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-90%, 0, 0);
+    }
+}
+
+@keyframes zoomHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scale1x2 {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes HideBanner {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes showHide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes sideToTop {
+    from {
+        transform: translateY(5%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes sideToTop2 {
+    from {
+        transform: translateY(10%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes sideToRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+@keyframes sideToRightAfter {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+@keyframes sideToBottomAfter {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+    }
+}
+/*  */
+.to-right {
+    /* animation: toRight 1s ease-in-out; */
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.to-left {
+    /* animation: toleft 1s ease-in; */
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 1s;
+}
+.to-right.start,
+.to-left.start {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.to-bottom {
+    /* animation: toBottom 1s ease-in-out; */
+    transform: translateY(-5%);
+    opacity: 0;
+    transition: all 1s;
+}
+.to-bottom.start {
+    transform: translateY(0);
+    opacity: 1;
+}
+.to-bottom-2 {
+    transform: translateY(-5%);
+    opacity: 0;
+    transition: all 1.5s;
+}
+.to-bottom-2.start {
+    transform: translateY(0);
+    opacity: 1;
+}
+.to-bottom-3 {
+    transform: translateY(-5%);
+    opacity: 0;
+    transition: all 2s;
+}
+.to-bottom-3.start {
+    transform: translateY(0);
+    opacity: 1;
+}
+.to-bottom-4 {
+    transform: translateY(-5%);
+    opacity: 0;
+    transition: all 2.5s;
+}
+.to-bottom-4.start {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.animate-show {
+    /* animation: show 1.5s ease-in; */
+    opacity: 0;
+    transition: all 1.5s;
+}
+.animate-show.start {
+    opacity: 1;
+}
+.animate-show-in {
+    /* animation: show 1.5s ease-in; */
+    transform: scale(0.5);
+    transform-origin: top;
+    transition: all 1s;
+}
+.animate-show-in.start {
+    transform: scale(1);
+}
+
+.animate-show-in-rotate {
+    /* animation: showInRotate 1s ease-in; */
+    transform: rotate(0) scale(0);
+    opacity: 0;
+    transition: all 1s;
+}
+.animate-show-in-rotate.start {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+}
+.animate-side-left {
+    left: 0;
+}
+.animate-side-right {
+    right: 0;
+}
+.animate-side-left,
+.animate-side-right {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* box-shadow: 15px -8px 20px 8px #fff; */
+    transition: all 2s;
+}
+.animate-side-left.start,
+.animate-side-right.start {
+    width: 0%;
+}
+.hover-image {
+    transition: all 0.5s;
+}
+.hover-image:hover {
+    transform: scale(1.2);
+}
+.button-hover:hover {
+    background-color: #36c1cc !important;
+}
+@keyframes toBottom {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes showInRotate {
+    from {
+        transform: rotate(0) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes toRight {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toleft {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
